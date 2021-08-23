@@ -15,6 +15,7 @@ body{
         .logo_area{
             width: 960px;
             height: 100px;
+            margin: 0 auto;
             background-color:#434343;
             .logo{
                 
@@ -29,12 +30,15 @@ body{
         .warapper{
             position: relative;
             width: 100vw;
+            margin: 0 auto;
             nav{
                 position: absolute;
                 z-index: 2;
-                width: 960px;
+                width: 100%;
+               
                 ul{
                     height: 60px;
+                    width: 960px;
                     margin: 0 auto;
                     display: flex;
                     justify-content: center;
@@ -592,18 +596,18 @@ body{
 
 @media all and (max-width: 600px){
     body{
-        width: 600px;
-        min-width: 600px;
+        width: 100%;
+        min-width: none;
         /* ◆◆◆◆◆◆◆◆◆◆ header開始 ◆◆◆◆◆◆◆◆◆◆ */
         header{
             height: 500px;
-            width: 600px;
+            width: 100%;
             .logo_area{
-                width: 600px;
+                width: 100%;
                 text-align: center;
             }
             .warapper{
-                width: 600px;
+                width: 100%;
                 nav{
                     display: none;
                 }
@@ -611,7 +615,7 @@ body{
                     display: none;
                 }
                 .warapper_img{
-                    min-width: 600px;
+                    
                     height: 400px;
                     overflow: hidden;
                 }
@@ -621,9 +625,10 @@ body{
 
         /* ◆◆◆◆◆◆◆◆◆◆ content_area開始 ◆◆◆◆◆◆◆◆◆◆ */
         .content_area{
-            width: 600px;
+            width: 100%;
+            margin: 0;
             main{
-                width: 600px;
+                width: 100%;
                 
                 /* ◆◆◆◆◆◆◆◆◆◆ table非表示show_window開始 ◆◆◆◆◆◆◆◆◆◆ */
                 table{
@@ -665,7 +670,7 @@ body{
 
                 /* ◆◆◆◆◆◆◆◆◆◆ news開始 ◆◆◆◆◆◆◆◆◆◆ */
                 .news{
-                    width: 600px;
+                    width: 100%;
                     height: 400px;
                     padding: 0;
                     .news_area{
@@ -691,7 +696,7 @@ body{
                             margin: none;
                         }
                         nav{
-                            margin-left: 7rem;
+                            margin: 0 auto;
                         }
                     }
 
@@ -700,7 +705,7 @@ body{
 
                 /* ◆◆◆◆◆◆◆◆◆◆ goto開始 ◆◆◆◆◆◆◆◆◆◆ */
                 .goto{
-                    width: 600px;
+                    width: 100%;
                     height: 500px;
                     margin: 0 auto;
                     .goto_area{
@@ -731,7 +736,7 @@ body{
                 /* ◆◆◆◆◆◆◆◆◆◆ goto2開始 ◆◆◆◆◆◆◆◆◆◆ */
                 .goto2{
                     display: inline-block;
-                    width: 600px;
+                    width: 100%;
                     height: 270px;
                     margin: 0 auto;
                     .goto2_area{
@@ -756,6 +761,7 @@ body{
 
                 /* ◆◆◆◆◆◆◆◆◆◆ topcs開始 ◆◆◆◆◆◆◆◆◆◆ */
                 .topcs{
+                    width: 100%;
                     height: 1630px;
                     .topcs_area{
                         width: 400px;
@@ -807,7 +813,7 @@ body{
 
                 /* ◆◆◆◆◆◆◆◆◆◆ skyphoto開始 ◆◆◆◆◆◆◆◆◆◆ */
                 .skyphoto{
-                    width: 600px;
+                    width: 100%;
                     height: 500px;
                     margin: 0 auto;
                     .skyphoto_area{
@@ -842,6 +848,7 @@ body{
 
                 /* ◆◆◆◆◆◆◆◆◆◆ feel_good開始 ◆◆◆◆◆◆◆◆◆◆ */
                 .feel_good{
+                    width: 100%;
                     height: 1010px;
                     .feel_good_area{
                         width: 400px;
@@ -890,7 +897,7 @@ body{
 
                 /* ◆◆◆◆◆◆◆◆◆◆ food開始 ◆◆◆◆◆◆◆◆◆◆ */
                 .food{
-                    width: 600px;
+                    width: 100%;
                     height: 660px;
                     margin: 0 auto;
                     .food_area{
@@ -933,8 +940,8 @@ body{
 
         /* ◆◆◆◆◆◆◆◆◆◆ footer開始 ◆◆◆◆◆◆◆◆◆◆ */
         footer{
-            width: 600px;
-            min-width: 600px;
+            width: 100%;
+            
             .footer_area{
                 width: auto;
             }
