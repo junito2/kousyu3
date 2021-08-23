@@ -1,0 +1,954 @@
+*{
+    font-size: 16px;
+    font-family: 'Balsamiq Sans', cursive;
+    font-family: 'Kosugi Maru', sans-serif;
+}
+
+body{
+    width: 100vw;
+    min-width: 960px;
+/*------------header開始----------------*/
+    header{
+        width: 100vw;
+        height: 600px;
+        background-color:#434343;
+        .logo_area{
+            width: 960px;
+            height: 100px;
+            background-color:#434343;
+            .logo{
+                
+                margin: 0 auto;
+                img{
+                    width: 5rem;
+                    height: 4rem;
+                    margin: 0.5rem;
+                }
+            }
+        }
+        .warapper{
+            position: relative;
+            width: 100vw;
+            nav{
+                position: absolute;
+                z-index: 2;
+                width: 960px;
+                ul{
+                    height: 60px;
+                    margin: 0 auto;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    li{
+                        width: 9rem;
+                        height: 60px;
+                        text-align: center;
+                        padding-bottom: 5px;
+                        a{
+                            display: inline-block;
+                            width: 9rem;
+                            height: 60px;
+                            font-size: 27px;
+                            font-weight: 900;
+                            text-shadow: 2px 3px 2px rgba(0,0,0,0.5);
+                            position: relative;
+                            padding-top: 11px;
+                            color: #fff;
+                        }
+                        a::before{
+                            position: absolute;
+                            content: '';
+                            width: 5vw;
+                            height: 2px;
+                            left: 50%;
+                            bottom: 11px;
+                            -webkit-transform: translateX(-50%);
+                            transform: translateX(-50%);
+                            background-color: #fff;
+                            border-radius: 2px;
+                            box-shadow: 0px 2px 0px 0 rgba(0,0,0,0.5);
+                        }
+                        a:hover{
+                            background-color: #000;
+                            filter: invert(1);
+                        }
+                    }
+                }
+            }
+            .warapper_obi{
+                width: 100vw;
+                height: 60px;
+                position: absolute;
+                background-color: #fff;
+                opacity: 0.3;
+                min-width: 960px;
+                z-index: 1;
+            }
+            .warapper_img{
+                position: absolute;
+                width: 100vw;
+                height: 500px;
+                overflow: hidden;
+                min-width: 960px;
+                img{
+                width: 100%;
+                height: 100%;
+                }
+            }
+        }   
+    }
+/*------------header終了----------------*/
+
+
+/*------------content_area開始----------------*/
+    .content_area{
+        width: 960px;
+        display: flex;
+        margin: 0 auto;
+        
+    
+    /*------------main開始(画面右に位置)----------------*/
+        main{
+            width: 85%;
+            order: 1;
+
+            /*------------table開始(テーブル写真割)----------------*/
+            table{
+                width: 700px;
+                height: 340px;
+                margin: 4rem auto;
+                display: block;
+                .table_box1{
+                    width: 310px;
+                    height: 340px;
+                    overflow: hidden;
+                }
+                .table_box2{
+                    width: 390px;
+                    height: 170px;
+                    overflow: hidden;
+                }
+                .table_box3{
+                    width: 195px;
+                    height: 170px;
+                    overflow: hidden;
+                }
+            }
+            img{
+                width: 100%;
+                height: 100%;
+            }
+
+            .show_window{
+                display: none;
+            }
+            /*------------table開始(テーブル写真割)----------------*/
+
+            /*------------movie開始----------------*/
+            .movie{
+                margin: 6rem auto;
+                width: 700px;
+            }
+            /*------------movie終了----------------*/
+
+            /*------------news開始----------------*/
+            .news{
+                height: 300px;
+                background-color: #7B7B7B;
+                padding: 2rem;
+                .news_area{
+                    color: #fff;
+                    display: flex;
+                    margin: 0 auto;
+                    .news_title{
+                        font-size: 35px;
+                        line-height: 15rem;
+                        margin: 0 4rem;
+                        h2{
+                            position: relative;
+                        }
+                        h2::before{
+                                position: absolute;
+                                content: '';
+                                width: 5vw;
+                                height: 2px;
+                                left: 50%;
+                                bottom: 95px;
+                                -webkit-transform: translateX(-50%);
+                                transform: translateX(-50%);
+                                background-color: #fff;
+                                border-radius: 2px;
+                                
+                        }
+                    }
+                    .news_border::before{
+                        border-left: 3px solid #fff;
+                        height: 240px;
+                        margin: 0 2rem;
+                        border-radius: 10px;
+                        background-color: #fff;
+                        content: "";
+                        vertical-align: middle;
+                        display: inline-block;
+                    }
+                    nav{
+                        margin-left: 4rem;
+                        ul{
+                            list-style-type: disc;
+                            li{
+                                margin-top: 1.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+            /*------------news終了----------------*/
+
+            /*------------goto開始----------------*/
+            .goto{
+                width: 100%;
+                height: 300px;
+                margin: 6rem auto;
+                .goto_area{
+                    width: 85%;
+                    margin: 0 4rem;
+                    display: flex;
+                    .goto_img{
+                        width: 50%;
+                        height: 300px;
+                        overflow: hidden;
+                        img{
+                            width: 160%;
+                            height: 160%;
+                            margin-left: -91px;
+                        }
+                    }
+                    .goto_content{
+                        width: 50%;
+                        padding-left: 5%;
+                        
+                        
+                        p{
+                            margin: 1rem;
+                        }
+                        .goto_bt_area{
+                            width: 100%;
+                            margin-top: 3rem;
+                            display: flex;
+                            justify-content: space-between;
+                            
+                        }
+                    }
+                }
+            }
+
+            .goto2{
+                display: none;
+            }
+            /*------------goto終了----------------*/
+
+            /*------------topcs開始----------------*/
+            .topcs{
+                height: 450px;
+                background-color: #7B7B7B;
+                .topcs_area{
+                    width: 700px;
+                    margin: 2rem 4rem;
+                    padding-top: 3rem;
+                    display: flex;
+                    justify-content: space-between;
+                    .topcs_box{
+                        width: 200px;
+                        height: 250px;
+                        background-color: #fff;
+                        text-align: center;
+                        .topcs_imgbox{
+                            width: 200px;
+                            height: 200px;
+                            overflow: hidden;
+                        }
+                        p{
+                            font-size: 15px;
+                            line-height: 3rem;
+                        }
+                    }
+                    .sp_bt_pink{
+                        display: none;
+                    }
+                }
+                .topcs_bt{
+                    width: 30rem;
+                    height: 4rem;
+                    background-color: #fff;
+                    border-radius: 4rem;
+                    margin: 0 12rem;
+                    a{
+                    width: 30rem;
+                    height: 4rem;
+                    display: block;
+                    text-align: center;
+                    line-height: 60px;
+                    color: #fff;
+                    border: 4px solid #fff;
+                    border-radius: 4rem;
+                    background-color: #EB68A0;
+                    box-shadow: 5px 4px 4px 2px rgba(255,255,255,0.6) inset, -5px -3px 3px 2px rgba(78,77,77,0.7) inset;
+                    }
+                }
+                .topcs_bt a:hover{
+                    filter: opacity(0.7);
+                }
+            }
+
+            /*------------topcs終了----------------*/
+
+            /*------------skyphoto開始----------------*/
+            .skyphoto{
+                width: 100%;
+                height: 300px;
+                margin: 6rem auto;
+                .skyphoto_area{
+                    width: 85%;
+                    margin: 0 4rem;
+                    display: flex;
+                    .skyphoto_img{
+                        width: 50%;
+                        height: 300px;
+                        overflow: hidden;
+                        order: 2;
+                        img{
+                            width: 137%;
+                            height: 179%;
+                            margin-top: -213px;
+                            margin-left: -91px;
+                        }
+                    }
+                    .skyphoto_content{
+                        width: 50%;
+                        padding-right: 5%;
+                        
+                        p{
+                            margin: 1rem;
+                        }
+                        .skyphoto_bt_area{
+                            width: 100%;
+                            margin-top: 3rem;
+                            display: flex;
+                            justify-content: space-between;
+                            a{
+                                display: flex;
+                                padding-left: 4rem;
+                                img{
+                                        width: 20px;
+                                        height: 20px;
+                                        margin: 0.6rem 2rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            /*------------skyphoto終了----------------*/
+
+            /*------------feel_good開始----------------*/
+            .feel_good{
+                height: 450px;
+                background-color: #7B7B7B;
+                padding-top: 3rem;
+                .feel_good_area{
+                    width: 700px;
+                    margin: 2rem 4rem;
+                    display: flex;
+                    justify-content: space-evenly;
+                    .feel_good_box{
+                        width: 200px;
+                        height: 250px;
+                        text-align: center;
+                        color: #fff;
+                        .feel_good_img{
+                            width: 200px;
+                            height: 200px;
+                            overflow: hidden;
+                        }
+                        p{
+                            font-size: 18px;
+                            line-height: 3rem;
+                        }
+                        .feel_good_bt{
+                            width: 200px;
+                            height: 3rem;
+                            background-color: #fff;
+                           
+                            border-radius: 3rem;
+                            display: inline-block;
+                            margin: 1rem 0;
+                            a{
+                            width: 200px;
+                            height: 3rem;
+                            line-height: 41px;
+                            font-size: 20px;
+                            display: inline-block;
+                            color: #fff;
+                            border: 4px solid #fff;
+                            background-color: #EB68A0;
+                            border-radius: 3rem;
+                            box-shadow: 5px 4px 4px 2px rgba(255,255,255,0.6) inset, -5px -3px 3px 2px rgba(78,77,77,0.7) inset;
+                            }
+                        }
+                        .feel_good_bt a:hover{
+                            opacity:0.7;
+                        }
+                        .sp_bt_pink{
+                            display: none;
+                        }
+                    }
+                }
+            }
+            /*------------feel_good終了----------------*/
+
+            /*------------food開始----------------*/
+            .food{
+                width: 100%;
+                height: 300px;
+                margin: 6rem auto;
+                .food_area{
+                    width: 85%;
+                    margin: 0 4rem;
+                    display: flex;
+                    .food_img{
+                        width: 50%;
+                        height: 340px;
+                        overflow: hidden;
+                        img{
+                            width: 100%;
+                            height: 110%;
+                        }
+                    }
+                    .food_content{
+                        width: 50%;
+                        padding-left: 5%;
+                        h2{
+                            height: 40px;
+                            line-height: 40px;
+                            padding-left: 10px;
+                            background-color: #b0824d;
+                            color: #fff;
+                        }
+                        p{
+                            margin: 1rem;
+                        }
+                        .food_bt_area{
+                            width: 100%;
+                            margin-top: 2rem;
+                            display: flex;
+                            flex-flow: column;
+                            .bt_l_yellow{
+                                margin-top: 14px;
+                                text-align: center;
+                                position: relative;
+                                .point::before{
+                                    content: "";
+                                    position: absolute;
+                                    top: 14px;
+                                    right: 18px;
+                                    width: 14px;
+                                    height: 14px;
+                                    border-right: 3px solid #fff;
+                                    border-bottom: 3px solid #fff;
+                                    transform: rotate(-45deg);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            /*------------food終了----------------*/
+            
+        } 
+    /*------------main終了(画面右に位置)----------------*/
+
+    /*------------aside開始(画面左に位置)----------------*/
+        aside{
+            width: 15%;
+            order: 0;
+            background-color:#C6C6C6;
+            .aside_box{
+                width: 110px;
+                height: 175px;
+                margin: 1rem auto;
+                border: 1px solid #000;
+                background-color: #fff;
+                .aside_img{
+                    height: 120px;
+                    overflow: hidden;
+                    border-bottom: 1px solid #000;
+                    img{
+                        width: 110%;
+                        height: 100%;
+                    }
+                }
+                .aside_title{
+                    margin: 5px;
+                    p{
+                        font-size: 10px;
+                    }
+                    &.aside_title p:nth-child(2){
+                        font-size: 6px;
+                        text-align: right;
+                        margin-top: 13px;
+                        margin-right: -18px;
+                        -webkit-transform: scale(0.7);
+                    }
+                }
+            }
+        }
+
+    }
+    /*------------aside終了(画面左に位置)----------------*/
+
+
+    /*------------footer開始----------------*/
+    footer{
+        background-color:#434343;
+        width: 100vw;
+        height: 370px;
+        color: #fff;
+        min-width: 960px;
+        .footer_area{
+            width: 960px;
+            margin: 0 auto;
+            padding-bottom: 1rem;
+            .footer_logo{
+                text-align: center;
+                margin-bottom: 10rem;
+                padding-top: 1rem;
+            }
+            p{
+                font-size: 25px;
+                margin-top:1rem;
+                margin-left: 1rem;
+                
+            }
+        }
+    }
+    /*------------footer終了----------------*/
+
+/*------------content_area終了(画面右に位置)----------------*/
+    h3{
+        font-size: 18px;
+        height: 40px;
+        line-height: 40px;
+        padding-left: 10px;
+        background-color: #b0824d;
+        color: #fff;
+        position: relative;
+    }
+    h3::after{
+        content: "";
+        position:absolute;
+        top:0;
+        right:0;
+        width:0;
+        height:0;
+        border-style: solid;
+        border-color: transparent #fff transparent transparent;
+        border-width: 20px 15px 20px 0;
+    }
+    .bt_s_yellow {
+        display: inline-block;
+        width: 140px;
+        height: 40px;
+        background-color: #A29453;
+        text-align: center;
+        line-height: 40px;
+        color: #fff;
+        box-shadow: 1px 5px 22px 0px rgba(0,0,0,0.5);
+    }
+    .bt_s_yellow:hover{
+        filter: opacity(0.5);
+    }
+    .bt_l_yellow{
+        display: inline-block;
+        width: 310px;
+        height: 40px;
+        background-color: #A29453;
+        text-align: center;
+        line-height: 40px;
+        color: #fff;
+        box-shadow: 1px 5px 22px 0px rgba(0,0,0,0.5);
+    }
+    .bt_l_yellow:hover{
+        filter: opacity(0.5);
+    }
+}
+
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+
+　　　　★★★★★★★　SP版　600pxで切り替え　★★★★★★★
+
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+
+@media all and (max-width: 600px){
+    body{
+        min-width: 600px;
+        /* ◆◆◆◆◆◆◆◆◆◆ header開始 ◆◆◆◆◆◆◆◆◆◆ */
+        header{
+            height: 500px;
+            width: 600px;
+            .logo_area{
+                width: 600px;
+                text-align: center;
+            }
+            .warapper{
+                width: 600px;
+                nav{
+                    display: none;
+                }
+                .warapper_obi{
+                    display: none;
+                }
+                .warapper_img{
+                    min-width: 600px;
+                    height: 400px;
+                    overflow: hidden;
+                }
+            }
+        }
+        /* ◆◆◆◆◆◆◆◆◆◆ header終了 ◆◆◆◆◆◆◆◆◆◆ */
+
+        /* ◆◆◆◆◆◆◆◆◆◆ content_area開始 ◆◆◆◆◆◆◆◆◆◆ */
+        .content_area{
+            main{
+                width: 600px;
+
+                /* ◆◆◆◆◆◆◆◆◆◆ table非表示show_window開始 ◆◆◆◆◆◆◆◆◆◆ */
+                table{
+                    display: none;
+                }
+                .show_window{
+                    width: 600px;
+                    height: 350px;
+                    margin: 4rem 0;
+                    position: relative;
+                    display: flex;
+                    overflow: hidden;
+                    .show_window_box1{
+                        position: absolute;
+                    }
+                    .show_window_box2{
+                        position: absolute;
+                    }
+                    .show_window_box3{
+                        position: absolute;
+                    }
+                    .show_window_box4{
+                        position: absolute;
+                    }
+                }
+                /* ◆◆◆◆◆◆◆◆◆◆ table非表示show_window終了 ◆◆◆◆◆◆◆◆◆◆ */
+        
+                /* ◆◆◆◆◆◆◆◆◆◆ movie開始 ◆◆◆◆◆◆◆◆◆◆ */
+                .movie{
+                    width: 600px;
+                    margin: 4rem auto;
+                    padding: 0 3rem;
+                    iframe{
+                        width: 500px;
+                        height: 300px;
+                    }
+                }
+                /* ◆◆◆◆◆◆◆◆◆◆ movie終了 ◆◆◆◆◆◆◆◆◆◆ */
+
+                /* ◆◆◆◆◆◆◆◆◆◆ news開始 ◆◆◆◆◆◆◆◆◆◆ */
+                .news{
+                    width: 600px;
+                    height: 400px;
+                    padding: 0;
+                    .news_area{
+                        flex-flow: column;
+                        .news_title{
+                            line-height: 0;
+                            margin: 3rem auto;
+                            h2::before{
+                                width: 5rem;
+                                height: 2px;
+                                left: 50%;
+                                top: 28px;
+                                bottom: 0;
+                            }
+
+                        }
+                        .news_border{
+                            margin: 0 auto;
+                        }
+                        .news_border::before{
+                            width: 500px;
+                            height: 2px;
+                            margin: none;
+                        }
+                        nav{
+                            margin-left: 7rem;
+                        }
+                    }
+
+                }
+                /* ◆◆◆◆◆◆◆◆◆◆ news終了 ◆◆◆◆◆◆◆◆◆◆ */
+
+                /* ◆◆◆◆◆◆◆◆◆◆ goto開始 ◆◆◆◆◆◆◆◆◆◆ */
+                .goto{
+                    width: 600px;
+                    height: 500px;
+                    margin: 0 auto;
+                    .goto_area{
+                        flex-flow: column;
+                        width: 550px;
+                        margin: 2rem auto;
+                        .goto_img{
+                            width: 100%;
+                            height: 220px;
+                            img{
+                                width: 200%;
+                                height: 180%;
+                                margin-left: -196px;
+                            }
+                        }
+                        .goto_content{
+                            width: auto;
+                            padding-left: 0;
+                            padding-top: 2rem;
+                            .goto_bt_area{
+                                padding: 0 1rem;
+                            }
+                        }
+                    }
+                }
+                /* ◆◆◆◆◆◆◆◆◆◆ goto終了 ◆◆◆◆◆◆◆◆◆◆ */
+
+                /* ◆◆◆◆◆◆◆◆◆◆ goto2開始 ◆◆◆◆◆◆◆◆◆◆ */
+                .goto2{
+                    display: inline-block;
+                    width: 600px;
+                    height: 270px;
+                    margin: 0 auto;
+                    .goto2_area{
+                        width: 550px;
+                        margin: 2rem auto;
+                        
+                        .goto2_content{
+                            display: flex;
+                            width: auto;
+                            padding-left: 0;
+                            padding-top: 2rem;
+                            .goto2_bt_area{
+                                padding: 0 1rem;
+                                .bt_s_yellow{
+                                    margin: 0rem auto 1rem;
+                                }
+                            }
+                        }
+                    }
+                }
+                /* ◆◆◆◆◆◆◆◆◆◆ goto2終了 ◆◆◆◆◆◆◆◆◆◆ */
+
+                /* ◆◆◆◆◆◆◆◆◆◆ topcs開始 ◆◆◆◆◆◆◆◆◆◆ */
+                .topcs{
+                    height: 1630px;
+                    .topcs_area{
+                        width: 400px;
+                        margin: 0 auto;
+                        flex-flow: column;
+
+                        .topcs_box{
+                            width: auto;
+                            height: 360px;
+                            
+                            .topcs_imgbox{
+                                width: auto;
+                                height: 310px;
+                                img{
+                                    height: 140%;
+                                }
+                            }
+                        }
+                        .sp_bt_pink{
+                            display: inline-block;
+                            width: 400px;
+                            height: 4rem;
+                            background-color: #fff;
+                            border-radius: 4rem;
+                            margin: 30px auto 5rem;
+                            a{
+                            width: 400px;
+                            height: 4rem;
+                            display: block;
+                            text-align: center;
+                            line-height: 60px;
+                            color: #fff;
+                            border: 4px solid #fff;
+                            border-radius: 4rem;
+                            background-color: #EB68A0;
+                            box-shadow: 5px 4px 4px 2px rgba(255,255,255,0.6) inset, -5px -3px 3px 2px rgba(78,77,77,0.7) inset;
+                            }
+                        }
+                        .sp_bt_pink a:hover{
+                            filter: opacity(0.7);
+                        }
+                        
+                    }
+                    .topcs_bt{
+                        display: none;
+                    }
+                }
+                /* ◆◆◆◆◆◆◆◆◆◆ topcs終了 ◆◆◆◆◆◆◆◆◆◆ */
+
+                /* ◆◆◆◆◆◆◆◆◆◆ skyphoto開始 ◆◆◆◆◆◆◆◆◆◆ */
+                .skyphoto{
+                    width: 600px;
+                    height: 500px;
+                    margin: 0 auto;
+                    .skyphoto_area{
+                        flex-flow: column;
+                        width: 550px;
+                        margin: 2rem auto;
+                        
+                        .skyphoto_img{
+                            width: 100%;
+                            height: 220px;
+                            order: 0;
+                            img{
+                                width: 100%;
+                                height: 210%;
+                                margin-left: -7px;
+                                margin-top: -211px;
+                            }
+                        }
+                        .skyphoto_content{
+                            width: auto;
+                           
+                            padding: 2rem 0 0 0;
+                            
+                            .skyphoto_bt_area{
+                                margin: 2rem auto 0;
+                                width: 320px;
+                            }
+                        }
+                    }
+                }
+                /* ◆◆◆◆◆◆◆◆◆◆ skyphoto終了 ◆◆◆◆◆◆◆◆◆◆ */
+
+                /* ◆◆◆◆◆◆◆◆◆◆ feel_good開始 ◆◆◆◆◆◆◆◆◆◆ */
+                .feel_good{
+                    height: 1010px;
+                    .feel_good_area{
+                        width: 400px;
+                        margin: 0 auto;
+                        flex-flow: column;
+                        .feel_good_box{
+                            width: auto;
+                            height: 490px;
+                            .feel_good_img{
+                                width: auto;
+                                height: 310px;
+                                img{
+                                    height: 140%;
+                                }
+                            }
+                            .sp_bt_pink{
+                                display: inline-block;
+                                width: 400px;
+                                height: 4rem;
+                                background-color: #fff;
+                                border-radius: 4rem;
+                                margin: 0;
+                                a{
+                                width: 400px;
+                                height: 4rem;
+                                display: block;
+                                text-align: center;
+                                line-height: 60px;
+                                color: #fff;
+                                border: 4px solid #fff;
+                                border-radius: 4rem;
+                                background-color: #EB68A0;
+                                box-shadow: 5px 4px 4px 2px rgba(255,255,255,0.6) inset, -5px -3px 3px 2px rgba(78,77,77,0.7) inset;
+                                }
+                            }
+                            .sp_bt_pink a:hover{
+                                filter: opacity(0.7);
+                            }
+                            .feel_good_bt{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                /* ◆◆◆◆◆◆◆◆◆◆ feel_good終了 ◆◆◆◆◆◆◆◆◆◆ */
+
+                /* ◆◆◆◆◆◆◆◆◆◆ food開始 ◆◆◆◆◆◆◆◆◆◆ */
+                .food{
+                    width: 600px;
+                    height: 660px;
+                    margin: 0 auto;
+                    .food_area{
+                        flex-flow: column;
+                        width: 550px;
+                        margin: 2rem auto;
+                        .food_img{
+                            width: 100%;
+                            height: 220px;
+                            img{
+                                width: 110%;
+                                height: 140%;
+                                margin-left: -16px;
+                            }
+                        }
+                        .food_content{
+                            width: auto;
+                            padding-left: 0;
+                            padding-top: 2rem;
+                            .food_bt_area{
+                                padding: 0;
+                                .bt_l_yellow{
+                                    width: 550px;
+                                }
+                            }
+                        }
+                    }
+                }
+                /* ◆◆◆◆◆◆◆◆◆◆ food終了 ◆◆◆◆◆◆◆◆◆◆ */
+
+            }
+        }
+        /* ◆◆◆◆◆◆◆◆◆◆ content_area終了 ◆◆◆◆◆◆◆◆◆◆ */
+
+        /* ◆◆◆◆◆◆◆◆◆◆ aside開始 ◆◆◆◆◆◆◆◆◆◆ */
+        aside{
+            display: none;
+        }
+        /* ◆◆◆◆◆◆◆◆◆◆ aside終了 ◆◆◆◆◆◆◆◆◆◆ */
+
+        /* ◆◆◆◆◆◆◆◆◆◆ footer開始 ◆◆◆◆◆◆◆◆◆◆ */
+        footer{
+            width: 600px;
+            min-width: 600px;
+            .footer_area{
+                width: auto;
+            }
+        }
+        /* ◆◆◆◆◆◆◆◆◆◆ footer終了 ◆◆◆◆◆◆◆◆◆◆ */
+
+        /* ◆◆◆◆◆◆◆◆◆◆ 共有エリア開始 ◆◆◆◆◆◆◆◆◆◆ */
+        .bt_s_yellow {
+            width: 230px;
+        }
+        h3::after{
+            right: -1px;
+        }
+
+        
+        /* ◆◆◆◆◆◆◆◆◆◆ 共有エリア終了 ◆◆◆◆◆◆◆◆◆◆ */
+    }
+
+}
