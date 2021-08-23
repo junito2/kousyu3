@@ -1,176 +1,315 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.scss">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+    <title>kousyu3_210806</title>
 </head>
 <body>
     <header>
-        <div>
-            <img src="img/sappari.png" alt="logo">
+        <div class="logo_area">
+            <h1 class="logo">
+                <img src="img/sappari.png" alt="logo">
+            </h1>
         </div>
-        <div>
+        <div class="warapper">
             <nav>
                 <ul>
-                    <li>top</li>
-                    <li>about</li>
-                    <li>accese</li>
-                    <li>help</li>
+                    <li>
+                        <a href="/">top</a>
+                    </li>
+                    <li>
+                        <a href="/">about</a>
+                    </li>
+                    <li>
+                        <a href="/">accese</a>
+                    </li>
+                    <li>
+                        <a href="/">help</a>
+                    </li>
                 </ul>
             </nav>
+            <div class="warapper_obi"></div>
+            <div class="warapper_img">
+                <img src="img/main_03.png" alt="main1">
+            </div>
         </div>
     </header>
-    <main>
-        <div>
-            <img src="img/IMG_0489.jpeg" alt="観覧車">
-            <img src="img/IMG_0344.jpeg" alt="サメ">
-            <img src="img/IMG_1044.jpeg" alt="ニョキ">
-            <img src="img/IMG_5884.jpeg" alt="山">
-        </div>
-        <div class="movie">
 
-        </div>
+    <div class="content_area">
+        <main>
+            <table>
+                <tr>
+                    <td rowspan="2" class="table_box1">
+                        <img src="img/IMG_0489.jpeg" alt="観覧車">
+                    </td>
+                    <td colspan="2" class="table_box2">
+                        <img src="img/IMG_0344.jpeg" alt="サメ">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table_box3">
+                        <img src="img/IMG_1044.jpeg" alt="ニョキ">
+                    </td>
+                    <td class="table_box3">
+                        <img src="img/IMG_5884.jpeg" alt="山">
+                    </td>
+                </tr>
+            </table>
+
+            <section class="show_window">
+                    <div class="show_window_box1">
+                        <img src="img/IMG_0489.jpeg" alt="観覧車">
+                    </div>
+                    <div class="show_window_box2">
+                        <img src="img/IMG_0344.jpeg" alt="サメ">
+                    </div>
+                
+                    <div class="show_window_box3">
+                        <img src="img/IMG_1044.jpeg" alt="ニョキ">
+                    </div>
+                    <div class="show_window_box3">
+                        <img src="img/IMG_5884.jpeg" alt="山">
+                    </div>
+            </section>
+           
+            <section class="movie">
+                <iframe width="700" height="400" src="https://www.youtube.com/embed/TG7mPOeO-Pw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </section>
 
 
-        <div class="news">
-            <p>新着情報</p>
-            <p>ジンギスカンは松尾が美味しい</p>
-            <p>サッポロ一番は「塩」一択</p>
-            <p>北海道赤平市が人気急上昇？</p>
-            <p>ジンギスカンは松尾が美味しい</p>
-            <p>サッポロ一番は「塩」一択</p>
-        </div>
-
-
-
-        <div>
-            <img src="img/main_02.png" alt="高原">
-            <div>
-                <h2>赤平のよいとこ一度はおいで</h2>
-                <p>北海道赤平市は北海道出身者が出演する某人気テレビ番組の影響でここ数年で知名度が急上昇。<br>
-                ドラマのロケ地になるなど、注目を集めています。</p>
-                <div>
-                    <a href="/">もっと知りたい</a>
+            <section class="news">
+                <div class="news_area">
+                    <div class="news_title">
+                        <h2>新着情報</h2>
+                    </div>
+                    <div class="news_border"></div>
+                    <nav class="news_list">
+                        <ul>
+                            <li>ジンギスカンは松尾が美味しい</li>
+                            <li>サッポロ一番は「塩」一択</li>
+                            <li>北海道赤平市が人気急上昇？</li>
+                            <li>ジンギスカンは松尾が美味しい</li>
+                            <li>サッポロ一番は「塩」一択</li>
+                        </ul>
+                    </nav>
                 </div>
-                <div>
-                    <a href="/">今すぐ行きます</a>
+            </section>
+
+
+
+            <section class="goto">
+                <div class="goto_area">
+                    <div class="goto_img">
+                        <img src="img/main_02.png" alt="高原">
+                    </div>
+                    <div class="goto_content">
+                        <h3>赤平のよいとこ一度はおいで</h3>
+                        <p>北海道赤平市は北海道出身者が出演する某人気テレビ番組の影響でここ数年で知名度が急上昇。<br>
+                        ドラマのロケ地になるなど、注目を集めています。</p>
+                        <div class="goto_bt_area">
+                                <a href="/" class="bt_s_yellow">もっと知りたい</a>
+                                <a href="/" class="bt_s_yellow">今すぐ行きます</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="goto2">
+                <div class="goto2_area">
+                    <h3>赤平のよいとこ一度はおいで</h3>
+                    <div class="goto2_content">
+                        
+                        <p>北海道赤平市は北海道出身者が出演する某人気テレビ番組の影響でここ数年で知名度が急上昇。<br>
+                        ドラマのロケ地になるなど、注目を集めています。</p>
+                        <div class="goto2_bt_area">
+                                <a href="/" class="bt_s_yellow">もっと知りたい</a>
+                                <a href="/" class="bt_s_yellow">今すぐ行きます</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="topcs">
+                <div class="topcs_area">
+                    <div class="topcs_box">
+                        <div class="topcs_imgbox">
+                            <img src="img/IMG_0419.jpeg" alt="ビル">
+                        </div>
+                        <p>マンション買うならいくら？</p>
+                    </div>
+                    <div class="sp_bt_pink">
+                        <a href="/">メルカソでお買い物する</a>
+                    </div>
+
+                    <div class="topcs_box">
+                        <div class="topcs_imgbox">
+                            <img src="img/IMG_1176.jpeg" alt="ダッフィー">
+                        </div>
+                        <p>あの時買えばよかった</p>
+                    </div>
+                    <div class="sp_bt_pink">
+                        <a href="/">メルカソでお買い物する</a>
+                    </div>
+
+                    <div class="topcs_box">
+                        <div class="topcs_imgbox">
+                            <img src="img/IMG_1319.jpeg" alt="エヴァ">
+                        </div>
+                        <p>売る気のないメルカソ特集</p>
+                    </div>
+                    <div class="sp_bt_pink">
+                        <a href="/">メルカソでお買い物する</a>
+                    </div>
+                </div>
+                <div class="topcs_bt">
+                    <a href="/">メルカソでお買い物する</a>
+                </div>
+            </section>
+
+
+
+            <section class="skyphoto">
+                <div class="skyphoto_area">
+                    <div class="skyphoto_img">
+                        <img src="img/IMG_0416.jpeg" alt="飛行機雲">
+                    </div>
+                    <div class="skyphoto_content">
+                        <h3>東京の空も悪くない</h3>
+                        <p>
+                            東京は空が狭い。<br>
+                            高いビルが隙間なくたくさん伸びでいって、
+                            空全体が見えることなんてほとんどないけど。<br>
+                            たまに高いところから空を見てみると、
+                            意外な発見があったりして。一息着くのもいいと思うよ。
+                        </p>
+                        <div class="skyphoto_bt_area">
+                            
+                                <a href="/" class="bt_l_yellow">
+                                    空の写真をもっとみる
+                                    <img src="img/modal.png" alt="photo">
+                                </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
+            <section class="feel_good">
+                <div class="feel_good_area">
+                    <div class="feel_good_box">
+                        <div class="feel_good_img">
+                            <img src="img/IMG_1319.jpeg" alt="エヴァ">
+                        </div>
+                        <p>未使用ZIPPO</p>
+                        <div class="feel_good_bt" >
+                                <a href="/">欲しい</a>
+                        </div>
+                        <div class="sp_bt_pink">
+                            <a href="/">欲しい</a>
+                        </div>
+                        
+                    </div>
+                    <div class="feel_good_box">
+                        <div class="feel_good_img">
+                            <img src="img/IMG_1319.jpeg" alt="エヴァ">
+                        </div>
+                        <p>モノリスオルゴール</p>
+                        <div class="feel_good_bt">
+                            <a href="/">欲しい</a>
+                        </div>  
+                        <div class="sp_bt_pink">
+                            <a href="/">欲しい</a>
+                        </div>                   
+                    </div>
+                </div>
+            </section>
+
+            <section class="food">
+                <div class="food_area">
+                    <div class="food_img">
+                        <img src="img/pc_img_10.png" alt="海鮮丼">
+                    </div>
+                    <div class="food_content">
+                        <h3>日本に生まれてよかったでしょ</h3>
+                        <p>
+                            海外旅行に行く度思うこと。「日本のご飯が食べたい。」<br>
+                            食べ慣れてるものだからということもあるだろうけれど、<br>
+                            それだけじゃないよね。
+                        </p>
+                        <div class="food_bt_area">
+                                <a href="/" class="bt_l_yellow">
+                                    カレーを食べたい
+                                    <span class="point"></span>
+                                </a>
+                                <a href="/" class="bt_l_yellow">
+                                    今日はラーメン
+                                    <span class="point"></span>
+                                </a>
+                                <a href="/" class="bt_l_yellow">
+                                    デート前だから今日はガマン
+                                    <span class="point"></span>
+                                </a>
+                    </div>
+                </div>
+                </div>
+            </section>
+
+
+
+            
+        </main>
+
+
+        <aside>
+            <div class="aside_box">
+                <div class="aside_img">
+                    <img src="img/pc_img_11.png" alt="クマぬいぐるみ">
+                </div>
+                <div class="aside_title">
+                    <p>飼い主募集中<br><br></p>
+                    <p>クマ牧場</p>
                 </div>
             </div>
-        </div>
-
-
-        <div class="topcs">
-            <div>
-                <div>
-                    <img src="img/IMG_0419.jpeg" alt="ビル">
-                    <p>マンション買うならいくら？</p>
+            <div class="aside_box">
+                <div class="aside_img">
+                    <img src="img/pc_img_10.png" alt="海鮮丼">
                 </div>
-                <div>
-                    <img src="img/IMG_1176.jpeg" alt="ダッフィー">
-                    <p>あの時買えばよかった</p>
+                <div class="aside_title">
+                    <p>映える海鮮丼ならココ</p>
+                    <p>さかないっぱい市場</p>
                 </div>
-                <div>
+            </div>
+            <div class="aside_box">
+                <div class="aside_img">
                     <img src="img/IMG_1319.jpeg" alt="エヴァ">
+                </div>
+                <div class="aside_title">
                     <p>売る気のないメルカソ特集</p>
-                </div>
-
-            </div>
-            <div class="topcs_bt">
-                <a href="/">メルカソでお買い物する</a>
-            </div>
-        </div>
-
-
-        <div>
-            <img src="img/IMG_0416.jpeg" alt="飛行機雲">
-            <div>
-                <h2>東京の空も悪くない</h2>
-                <p>東京は空が狭い。<br>
-                高いビルが隙間なくたくさん伸びでいって、<br>
-                空全体が見えることなんてほとんどないけど。<br>
-                たまに高いところから空を見てみると、<br>
-                意外な発見があったりして。一息着くのもいいと思うよ。
-                </p>
-                <div>
-                    <a href="/">空の写真をもっとみる</a>
+                    <p>メルカソ</p>
                 </div>
             </div>
-        </div>
-
-
-        <div>
-            <div>
-                <img src="img/IMG_1319.jpeg" alt="エヴァ">
-                <p>売る気のないメルカソ特集</p>
-                <div>
-                    <a href="/">欲しい</a>
-                </div>
-            </div>
-            <div>
-                <img src="img/IMG_1319.jpeg" alt="エヴァ">
-                <p>売る気のないメルカソ特集</p>
-                <div>
-                    <a href="/">欲しい</a>
-                </div>
-            </div>
-        </div>
-
-        <div>
-            <div>
-                <img src="img/pc_img_10.png" alt="海鮮丼">
-            </div>
-            <div>
-                <h2>日本に生まれてよかったでしょ</h2>
-                <p>
-                    海外旅行に行く度思うこと。「日本のご飯が食べたい。」<br>
-                    食べ慣れてるものだからということもあるだろうけれど、<br>
-                    それだけじゃないよね。
-                </p>
-                <div>
-                    <p>カレーを食べたい</p>
-                </div>
-                <div>
-                    <p>今日はラーメン</p>
-                </div>
-                <div>
-                    <p>デート前だから今日はガマン</p>
-                </div>
-            </div>
-        </div>
-
-
-
-        
-    </main>
-
-
-    <aside>
-        <div>
-            <img src="img/pc_img_11.png" alt="クマぬいぐるみ">
-            <p>飼い主募集中</p>
-            <p>クマ牧場</p>
-        </div>
-        <div>
-            <img src="img/pc_img_10.png" alt="海鮮丼">
-            <p>映える海鮮丼ならココ</p>
-            <p>さかないっぱい市場</p>
-        </div>
-        <div>
-            <img src="img/IMG_1319.jpeg" alt="エヴァ">
-            <p>売る気のないメルカソ特集</p>
-            <p>メルカソ</p>
-        </div>
-
-    </aside> 
-</body>
-<footer>
-    <div>
-        <img src="img/sappari.png" alt="logo">
-        <p>Matsuo sheep</p>
-        <p>〒000-0000 TOKYO SHINJYUKU 0-0-0</p>
+        </aside> 
     </div>
-</footer>
+    <footer>
+        <div class="footer_area">
+            <div class="footer_logo">
+                <img src="img/sappari.png" alt="logo">
+            </div>
+            <p>Matsuo sheep</p>
+            <p>〒000-0000 TOKYO SHINJYUKU 0-0-0</p>
+        </div>
+    </footer>
+</body>
+
 </html>
