@@ -26,6 +26,7 @@ body header {
 body header .logo_area {
   width: 960px;
   height: 100px;
+  margin: 0 auto;
   background-color: #434343;
 }
 
@@ -42,16 +43,18 @@ body header .logo_area .logo img {
 body header .warapper {
   position: relative;
   width: 100vw;
+  margin: 0 auto;
 }
 
 body header .warapper nav {
   position: absolute;
   z-index: 2;
-  width: 960px;
+  width: 100%;
 }
 
 body header .warapper nav ul {
   height: 60px;
+  width: 960px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -710,8 +713,8 @@ body .bt_l_yellow:hover {
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
 @media all and (max-width: 600px) {
   body {
-    width: 600px;
-    min-width: 600px;
+    width: 100%;
+    min-width: none;
     /* ◆◆◆◆◆◆◆◆◆◆ header開始 ◆◆◆◆◆◆◆◆◆◆ */
     /* ◆◆◆◆◆◆◆◆◆◆ header終了 ◆◆◆◆◆◆◆◆◆◆ */
     /* ◆◆◆◆◆◆◆◆◆◆ content_area開始 ◆◆◆◆◆◆◆◆◆◆ */
@@ -725,14 +728,14 @@ body .bt_l_yellow:hover {
   }
   body header {
     height: 500px;
-    width: 600px;
+    width: 100%;
   }
   body header .logo_area {
-    width: 600px;
+    width: 100%;
     text-align: center;
   }
   body header .warapper {
-    width: 600px;
+    width: 100%;
   }
   body header .warapper nav {
     display: none;
@@ -741,15 +744,15 @@ body .bt_l_yellow:hover {
     display: none;
   }
   body header .warapper .warapper_img {
-    min-width: 600px;
     height: 400px;
     overflow: hidden;
   }
   body .content_area {
-    width: 600px;
+    width: 100%;
+    margin: 0;
   }
   body .content_area main {
-    width: 600px;
+    width: 100%;
     /* ◆◆◆◆◆◆◆◆◆◆ table非表示show_window開始 ◆◆◆◆◆◆◆◆◆◆ */
     /* ◆◆◆◆◆◆◆◆◆◆ table非表示show_window終了 ◆◆◆◆◆◆◆◆◆◆ */
     /* ◆◆◆◆◆◆◆◆◆◆ movie開始 ◆◆◆◆◆◆◆◆◆◆ */
@@ -804,7 +807,7 @@ body .bt_l_yellow:hover {
     height: 300px;
   }
   body .content_area main .news {
-    width: 600px;
+    width: 100%;
     height: 400px;
     padding: 0;
   }
@@ -834,10 +837,10 @@ body .bt_l_yellow:hover {
     margin: none;
   }
   body .content_area main .news .news_area nav {
-    margin-left: 7rem;
+    margin: 0 auto;
   }
   body .content_area main .goto {
-    width: 600px;
+    width: 100%;
     height: 500px;
     margin: 0 auto;
   }
@@ -868,7 +871,7 @@ body .bt_l_yellow:hover {
   }
   body .content_area main .goto2 {
     display: inline-block;
-    width: 600px;
+    width: 100%;
     height: 270px;
     margin: 0 auto;
   }
@@ -891,6 +894,7 @@ body .bt_l_yellow:hover {
     margin: 0rem auto 1rem;
   }
   body .content_area main .topcs {
+    width: 100%;
     height: 1630px;
   }
   body .content_area main .topcs .topcs_area {
@@ -941,7 +945,7 @@ body .bt_l_yellow:hover {
     display: none;
   }
   body .content_area main .skyphoto {
-    width: 600px;
+    width: 100%;
     height: 500px;
     margin: 0 auto;
   }
@@ -975,6 +979,7 @@ body .bt_l_yellow:hover {
     width: 320px;
   }
   body .content_area main .feel_good {
+    width: 100%;
     height: 1010px;
   }
   body .content_area main .feel_good .feel_good_area {
@@ -1025,7 +1030,7 @@ body .bt_l_yellow:hover {
     display: none;
   }
   body .content_area main .food {
-    width: 600px;
+    width: 100%;
     height: 660px;
     margin: 0 auto;
   }
@@ -1061,8 +1066,7 @@ body .bt_l_yellow:hover {
     display: none;
   }
   body footer {
-    width: 600px;
-    min-width: 600px;
+    width: 100%;
   }
   body footer .footer_area {
     width: auto;
