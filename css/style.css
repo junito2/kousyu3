@@ -710,6 +710,7 @@ body .bt_l_yellow:hover {
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
 @media all and (max-width: 600px) {
   body {
+    width: 600px;
     min-width: 600px;
     /* ◆◆◆◆◆◆◆◆◆◆ header開始 ◆◆◆◆◆◆◆◆◆◆ */
     /* ◆◆◆◆◆◆◆◆◆◆ header終了 ◆◆◆◆◆◆◆◆◆◆ */
@@ -743,6 +744,9 @@ body .bt_l_yellow:hover {
     min-width: 600px;
     height: 400px;
     overflow: hidden;
+  }
+  body .content_area {
+    width: 600px;
   }
   body .content_area main {
     width: 600px;
