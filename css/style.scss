@@ -6,7 +6,8 @@
 
 body{
     width: 100vw;
-    min-width: 960px;
+    /*
+    min-width: 960px;*/
 /*------------header開始----------------*/
     header{
         width: 100vw;
@@ -79,6 +80,17 @@ body{
                     }
                 }
             }
+
+            /*ハンバーガー（PC非表示）*/
+            .openbtn{
+                display: none;
+            }
+            #hamburger{
+                display: none;
+            }
+            /*ハンバーガー（PC非表示）*/
+
+            
             .warapper_obi{
                 width: 100vw;
                 height: 60px;
@@ -99,8 +111,48 @@ body{
                 height: 100%;
                 }
             }
+
+            
+           
+            .slide {
+                position: relative;
+                overflow : hidden;
+                width: 100vw;
+                margin: auto;
+                background: #fff;
+            }
+        
+        
+            .slide img {
+                display : block;
+                position : absolute;
+                width: 100%;
+                height: inherit;
+                opacity: 0;
+                animation: slideAnime 24s ease infinite;
+            }
+        
+        
+            .slide img:nth-of-type(1) { animation-delay: 0s }
+            .slide img:nth-of-type(2) { animation-delay: 6s }
+            .slide img:nth-of-type(3) { animation-delay: 12s }
+            .slide img:nth-of-type(4) { animation-delay: 18s }
+        
+        
+            @keyframes slideAnime{
+                0% { opacity: 0 }
+                6% { opacity: 1 }
+                10% { opacity: 1 }
+                28% { opacity: 1 }
+                55% { opacity: 0 }
+                100% { opacity: 0 }
+            }
         }   
     }
+
+
+
+
 /*------------header終了----------------*/
 
 
@@ -137,15 +189,63 @@ body{
                     height: 170px;
                     overflow: hidden;
                 }
+                a:hover{
+                    opacity: 0.7;
+                }
             }
             img{
                 width: 100%;
                 height: 100%;
             }
 
-            .show_window{
+            .slider_show{
                 display: none;
             }
+
+
+            /*★★★★★★★ポップアップ★★★★*/
+            .bigimg .close{ 
+                display: none;
+            }
+            #bigimg_display .close{
+                display: block;
+                color: #fff;
+                margin: 5vw 0 0 73vw;
+                text-align: center;
+                p{
+                    font-size: 38px;
+                    text-shadow: 3px 2px 3px #000;
+                }
+                :nth-child(2){
+                    font-size: 22px;
+                }
+            }
+            
+            #bigimg_display {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                max-width: 100%!important;
+                height: 100%;
+                background: rgba(0,0,0,0.8);
+                z-index: 997;
+            }
+            #bigimg_display img {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                max-width: 60%;
+                max-height: 70%;
+                border: 10px solid #fff;
+                box-shadow: 6px 7px 4px 5px rgba(0,0,0,0.5);
+                height: 90%;
+            }
+            /*★★★★★★★ポップアップ★★★★*/
             /*------------table開始(テーブル写真割)----------------*/
 
             /*------------movie開始----------------*/
@@ -339,19 +439,69 @@ body{
                             margin-top: 3rem;
                             display: flex;
                             justify-content: space-between;
-                            a{
-                                display: flex;
-                                padding-left: 4rem;
-                                img{
-                                        width: 20px;
-                                        height: 20px;
-                                        margin: 0.6rem 2rem;
-                                }
+                            a {
+                                position: relative;
+                                padding: 0.1em 0.3em 0.1em 0;
+                            }
+                            a::before,a::after {
+                                position: absolute;
+                                content: "□";
+                                width:4px;
+                                height: 4px;
+                                color: #fff;
+                            }
+                            a::before {
+                                left: 258px;
+                                top: -2px;
+                            }
+                            a::after {
+                                left: 262.5px;
+                                top: 3.5px;
+                            .block{
+                                width: 15px;
+                                height: 15px;
+                                margin-top: 6px;
+                                margin-left: 254px;
+                                position: absolute;
+                                border: 2px solid #fff;
+                                border-radius: 2px;
+                            }
+                            .block::after{
+                                width: 15px;
+                                height: 15px;
+                                margin-top: 8px;
+                                margin-left: 254px;
+                                position: absolute;
+                                border: 2px solid #fff;
+                                border-radius: 2px;
+                            }
                             }
                         }
                     }
                 }
+                 /*★★★★★★★ポップアップ★★★★*/
+            .skyphoto_bt_area{
+                 .close{ 
+                display: none;
+                }
             }
+            
+            .skyphoto_bt_area img{
+                display: none;
+            }
+            .skyphoto_bt_area a img{
+                display: block;
+            }
+            
+           
+        
+            
+            
+            
+        
+            /*★★★★★★★ポップアップ★★★★*/
+            }
+
             
             /*------------skyphoto終了----------------*/
 
@@ -478,32 +628,40 @@ body{
             width: 15%;
             order: 0;
             background-color:#C6C6C6;
-            .aside_box{
-                width: 110px;
-                height: 175px;
-                margin: 1rem auto;
-                border: 1px solid #000;
-                background-color: #fff;
-                .aside_img{
+            .aside_slide{
+                /*メニューがついてくる設定*/
+                display: flex;
+                flex-flow: column;
+                position: sticky;/*こいつがキモ*/
+                top: 10px;
+                /*メニューがついてくる設定*/
+                .aside_box{
+                    width: 110px;
+                    height: 175px;
+                    margin: 1rem auto;
+                    border: 1px solid #000;
+                    background-color: #fff;
+                    .aside_img{
                     height: 120px;
                     overflow: hidden;
                     border-bottom: 1px solid #000;
-                    img{
-                        width: 110%;
-                        height: 100%;
+                        img{
+                            width: 110%;
+                            height: 100%;
+                        }
                     }
-                }
-                .aside_title{
+                    .aside_title{
                     margin: 5px;
-                    p{
-                        font-size: 10px;
-                    }
-                    &.aside_title p:nth-child(2){
-                        font-size: 6px;
-                        text-align: right;
-                        margin-top: 13px;
-                        margin-right: -18px;
-                        -webkit-transform: scale(0.7);
+                        p{
+                            font-size: 10px;
+                        }
+                        &.aside_title p:nth-child(2){
+                            font-size: 6px;
+                            text-align: right;
+                            margin-top: 13px;
+                            margin-right: -18px;
+                            -webkit-transform: scale(0.7);
+                        }
                     }
                 }
             }
@@ -523,7 +681,7 @@ body{
         .footer_area{
             width: 960px;
             margin: 0 auto;
-            padding-bottom: 1rem;
+            
             .footer_logo{
                 text-align: center;
                 margin-bottom: 10rem;
@@ -586,24 +744,34 @@ body{
     .bt_l_yellow:hover{
         filter: opacity(0.5);
     }
+    #bigimg_display{
+        .skyphoto_bt_area {
+            .bt_l_yellow{
+        display: none;
+            }
+        }
+    }
 }
 
-/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+/*=======================================================
 
-　　　　★★★★★★★　SP版　600pxで切り替え　★★★★★★★
+        ★★★★★★★ SP版 600pxで切り替え ★★★★★★★
 
-■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+=========================================================*/
 
 @media all and (max-width: 600px){
+    *{
+        font-size: 18px;
+    }
     body{
-        width: 100%;
-        min-width: none;
+        width: 100vw;
+        min-width: auto;
         /* ◆◆◆◆◆◆◆◆◆◆ header開始 ◆◆◆◆◆◆◆◆◆◆ */
         header{
-            height: 500px;
-            width: 100%;
+            height: 405px;
+            width: 100vw;
             .logo_area{
-                width: 100%;
+                width: 100vw;
                 text-align: center;
             }
             .warapper{
@@ -613,64 +781,293 @@ body{
                 }
                 .warapper_obi{
                     display: none;
+                    min-width: auto;
                 }
                 .warapper_img{
-                    
-                    height: 400px;
+                    min-width: auto;
+                
+                    height: 305px;
                     overflow: hidden;
+                    
                 }
+
+                 /*ハンバーガー（sp表示）*/
+                .openbtn{
+                    display: inline-block;
+                }
+                #hamburger{
+                    display: inline-block;
+                }
+                /*ハンバーガー（sp非表示）*/
+
+                /*ハンバーガー*/
+                #hamburger{
+                    /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+                    position:fixed;
+                    z-index: 999;
+                    /*ナビのスタート位置と形状*/
+                    top:0;
+                    right: -120%;
+                    width:100%;
+                    height: 100%;/*ナビの高さ*/
+                    background:rgba(0,0,0,0.45);
+                    /*動き*/
+                    transition: all 0.6s;
+                }
+
+                /*アクティブクラスがついたら位置を0に*/
+                #hamburger.panelactive{
+                    right: 0;
+                }
+
+                /*ナビゲーション*/
+                #hamburger ul {
+                    /*ナビゲーション天地中央揃え*/
+                    position: absolute;
+                    flex-flow: column;
+                    z-index: 999;
+                    top:50%;
+                    left:50%;
+                    transform: translate(-50%,-50%);
+                }
+
+                /*リストのレイアウト設定*/
+
+                #hamburger li{
+                    list-style: none;
+                    text-align: center;
+                    margin-bottom: 1rem;
+                }
+
+                #hamburger li a{
+                    color: #fff;
+                    text-decoration: none;
+                    padding:10px;
+                    display: block;
+                    
+                    letter-spacing: 0.1em;
+                    font-weight: bold;
+                }
+
+                .openbtn{
+                    position:fixed;
+                    z-index: 9999;/*ボタンを最前面に*/
+                    top:10px;
+                    right: 10px;
+                    cursor: pointer;
+                    width: 50px;
+                    height:50px;
+                }
+                    
+                /*×に変化*/	
+                .openbtn span{
+                    display: inline-block;
+                    transition: all .4s;
+                    position: absolute;
+                    left: 14px;
+                    height: 3px;
+                    border-radius: 2px;
+                    background-color: #fff;
+                    width: 45%;
+                }
+
+                .openbtn span:nth-of-type(1) {
+                    top:15px;	
+                }
+
+                .openbtn span:nth-of-type(2) {
+                    top:23px;
+                }
+
+                .openbtn span:nth-of-type(3) {
+                    top:31px;
+                }
+
+                .openbtn.active span:nth-of-type(1) {
+                    top: 18px;
+                    left: 18px;
+                    transform: translateY(6px) rotate(-45deg);
+                    width: 30%;
+                }
+
+                .openbtn.active span:nth-of-type(2) {
+                    opacity: 0;
+                }
+
+                .openbtn.active span:nth-of-type(3){
+                    top: 30px;
+                    left: 18px;
+                    transform: translateY(-6px) rotate(45deg);
+                    width: 30%;
+                }
+                
+
             }
         }
         /* ◆◆◆◆◆◆◆◆◆◆ header終了 ◆◆◆◆◆◆◆◆◆◆ */
 
         /* ◆◆◆◆◆◆◆◆◆◆ content_area開始 ◆◆◆◆◆◆◆◆◆◆ */
         .content_area{
-            width: 100%;
+            width: 100vw;
             margin: 0;
             main{
-                width: 100%;
+                width: 100vw;
                 
-                /* ◆◆◆◆◆◆◆◆◆◆ table非表示show_window開始 ◆◆◆◆◆◆◆◆◆◆ */
+                /* ◆◆◆◆◆◆◆◆◆◆ table非表示slider_show開始 ◆◆◆◆◆◆◆◆◆◆ */
                 table{
                     display: none;
                 }
-                .show_window{
-                    width: 600px;
-                    height: 350px;
-                    margin: 4rem 0;
-                    position: relative;
-                    display: flex;
-                    overflow: hidden;
-                    .show_window_box1{
-                        position: absolute;
-                    }
-                    .show_window_box2{
-                        position: absolute;
-                    }
-                    .show_window_box3{
-                        position: absolute;
-                    }
-                    .show_window_box4{
-                        position: absolute;
+                .slider_show{
+                    display: block;
+                    margin: 2rem auto;
+                    height: 250px;
+                    .slider_show_area{
+                        
+                       
+                        margin: 0 auto;
+                        overflow: hidden;
+                        img{
+                            width: 75%;
+                            
+                            margin: 0 auto;
+                            z-index: 800;
+                                content: "";
+                             
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                bottom: 0;
+                                left: 0;
+                             
+                            
+                        }
+                        .slick_slide{
+                            margin: 0 10px;
+                        }
+                        /*戻る、次へ矢印の位置*/
+                        .slick-prev, 
+                        .slick-next {
+                            position: absolute;/*絶対配置にする*/
+                            top: 50%;
+                            cursor: pointer;/*マウスカーソルを指マークに*/
+                            outline: none;/*クリックをしたら出てくる枠線を消す*/
+                            border-top: 5px solid #fff;/*矢印の色*/
+                            border-right: 5px solid #fff;/*矢印の色*/
+                            height: 28px;
+                            width: 28px;
+                            margin: 0 3%;
+                            z-index: 700;
+                        }
+                        
+
+
+                        .slick-prev {/*戻る矢印の位置と形状*/
+                            left: 0.5%;
+                            transform: rotate(-135deg);
+                        }
+
+                        .slick-next {/*次へ矢印の位置と形状*/
+                            right: 0.5%;
+                            transform: rotate(45deg);
+                        }
+
+                        .slider_box1{
+                            background-image: url("../img/IMG_0344.jpeg");
+                            width: 100%;
+                            height: 250px; 
+                            background-size: cover;
+                            position: relative;
+                        }
+                        .slider_box1::after{
+                            content: "";
+                            background: rgba(255,255,255,.3);
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            left: 0;
+                        }
+                        .slider_box2{
+                            background-image: url("../img/IMG_1044.jpeg");
+                            width: 100%;
+                            height: 250px; 
+                            background-size: cover;
+                            
+                            position: relative;
+                        }
+                        .slider_box2::after{
+                            content: "";
+                            background: rgba(255,255,255,.3);
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            left: 0;
+                        }
+                        .slider_box3{
+                            background-image: url("../img/IMG_5884.jpeg");
+                            width: 100%;
+                            height: 250px; 
+                            background-size: cover;
+                            
+                            position: relative;
+                        }
+                        .slider_box3::after{
+                            content: "";
+                            background: rgba(255,255,255,.3);
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            left: 0;
+                        }
+                        .slider_box4{
+                            background-image: url("../img/IMG_0489.jpeg");
+                            width: 100%;
+                            height: 250px;
+                            background-size: cover;
+                            position: relative;
+                        }
+                        .slider_box4::after{
+                            content: "";
+                            background: rgba(255,255,255,.3);
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            left: 0;
+                        }
                     }
                 }
-                /* ◆◆◆◆◆◆◆◆◆◆ table非表示show_window終了 ◆◆◆◆◆◆◆◆◆◆ */
+
+                
+                
+                /* ◆◆◆◆◆◆◆◆◆◆ table非表示slider_show終了 ◆◆◆◆◆◆◆◆◆◆ */
         
                 /* ◆◆◆◆◆◆◆◆◆◆ movie開始 ◆◆◆◆◆◆◆◆◆◆ */
                 .movie{
-                    width: 600px;
-                    margin: 4rem auto;
-                    padding: 0 3rem;
-                    iframe{
-                        width: 500px;
-                        height: 300px;
+                    width: 100vw;
+                    margin: 3rem auto;
+                    padding: 0;
+                    .movie_box{
+                        width: 90%;
+                        height: 200px;
+                        margin: 0 auto;
+                        display: block;
+                        overflow: hidden;
+                    
+                        iframe{
+                        width: 100%;
+                        height: 100%;
+                        
+                        }
                     }
                 }
                 /* ◆◆◆◆◆◆◆◆◆◆ movie終了 ◆◆◆◆◆◆◆◆◆◆ */
 
                 /* ◆◆◆◆◆◆◆◆◆◆ news開始 ◆◆◆◆◆◆◆◆◆◆ */
                 .news{
-                    width: 100%;
+                    width: 100vw;
                     height: 400px;
                     padding: 0;
                     .news_area{
@@ -691,7 +1088,7 @@ body{
                             margin: 0 auto;
                         }
                         .news_border::before{
-                            width: 500px;
+                            width: 84vw;
                             height: 2px;
                             margin: none;
                         }
@@ -705,16 +1102,17 @@ body{
 
                 /* ◆◆◆◆◆◆◆◆◆◆ goto開始 ◆◆◆◆◆◆◆◆◆◆ */
                 .goto{
-                    width: 100%;
+                    width: 100vw;
                     height: 500px;
                     margin: 0 auto;
                     .goto_area{
                         flex-flow: column;
-                        width: 550px;
+                        width: 100vw;
                         margin: 2rem auto;
                         .goto_img{
-                            width: 100%;
+                            width: 90%;
                             height: 220px;
+                            margin: 0 auto;
                             img{
                                 width: 200%;
                                 height: 180%;
@@ -722,12 +1120,17 @@ body{
                             }
                         }
                         .goto_content{
-                            width: auto;
+                            width: 91%;
                             padding-left: 0;
-                            padding-top: 2rem;
+                            padding-top: 1rem;
+                            margin: 0 auto;
                             .goto_bt_area{
                                 padding: 0 1rem;
+                                margin-top: 1rem;
                             }
+                        }
+                        .bt_s_yellow{
+                            width: 45%;
                         }
                     }
                 }
@@ -736,22 +1139,28 @@ body{
                 /* ◆◆◆◆◆◆◆◆◆◆ goto2開始 ◆◆◆◆◆◆◆◆◆◆ */
                 .goto2{
                     display: inline-block;
-                    width: 100%;
+                    width: 100vw;
                     height: 270px;
                     margin: 0 auto;
                     .goto2_area{
-                        width: 550px;
-                        margin: 2rem auto;
+                        width: 90%;
+                        margin: 1rem auto;
                         
                         .goto2_content{
                             display: flex;
                             width: auto;
                             padding-left: 0;
-                            padding-top: 2rem;
+                            padding-top: 1rem;
+                            p{
+                                margin: 0;
+                                width: 54%;
+                            }
                             .goto2_bt_area{
-                                padding: 0 1rem;
+                                width: 39%;
+                                margin: 0 auto;
                                 .bt_s_yellow{
                                     margin: 0rem auto 1rem;
+                                    width: 36vw;
                                 }
                             }
                         }
@@ -762,9 +1171,9 @@ body{
                 /* ◆◆◆◆◆◆◆◆◆◆ topcs開始 ◆◆◆◆◆◆◆◆◆◆ */
                 .topcs{
                     width: 100%;
-                    height: 1630px;
+                    height: 1690px;
                     .topcs_area{
-                        width: 400px;
+                        width: 65vw;
                         margin: 0 auto;
                         flex-flow: column;
 
@@ -782,13 +1191,13 @@ body{
                         }
                         .sp_bt_pink{
                             display: inline-block;
-                            width: 400px;
+                            width: 100%;
                             height: 4rem;
                             background-color: #fff;
                             border-radius: 4rem;
                             margin: 30px auto 5rem;
                             a{
-                            width: 400px;
+                            
                             height: 4rem;
                             display: block;
                             text-align: center;
@@ -813,33 +1222,47 @@ body{
 
                 /* ◆◆◆◆◆◆◆◆◆◆ skyphoto開始 ◆◆◆◆◆◆◆◆◆◆ */
                 .skyphoto{
-                    width: 100%;
-                    height: 500px;
-                    margin: 0 auto;
+                    width: 100vw;
+                    height: 9%;
+                    margin: 1rem auto 2rem;
                     .skyphoto_area{
                         flex-flow: column;
-                        width: 550px;
+                        width: 100vw;
                         margin: 2rem auto;
-                        
                         .skyphoto_img{
-                            width: 100%;
+                            width: 90%;
                             height: 220px;
                             order: 0;
+                            margin: 0 auto;
                             img{
-                                width: 100%;
+                                width: 105%;
                                 height: 210%;
                                 margin-left: -7px;
                                 margin-top: -211px;
                             }
                         }
                         .skyphoto_content{
-                            width: auto;
-                           
-                            padding: 2rem 0 0 0;
+                            width: 91%;
+                            padding-left: 0;
+                            padding-top: 1rem;
+                            padding-right: 0%;
+                            margin: 0 auto;
+                            
                             
                             .skyphoto_bt_area{
                                 margin: 2rem auto 0;
-                                width: 320px;
+                                width: 100%;
+                                a{
+                                    width: 90%;
+                                    margin: 0 auto;
+                                    display: flex;
+                                    /* justify-items: center; */
+                                    padding-left: 16%;
+                                    font-size: 4vw;
+                                    img{
+                                        margin: 0.6rem 1rem;
+                                    }
+                                }
                             }
                         }
                     }
@@ -848,10 +1271,10 @@ body{
 
                 /* ◆◆◆◆◆◆◆◆◆◆ feel_good開始 ◆◆◆◆◆◆◆◆◆◆ */
                 .feel_good{
-                    width: 100%;
-                    height: 1010px;
+                    width: 100vw;
+                    height: 1030px;
                     .feel_good_area{
-                        width: 400px;
+                        width: 65vw;
                         margin: 0 auto;
                         flex-flow: column;
                         .feel_good_box{
@@ -866,13 +1289,13 @@ body{
                             }
                             .sp_bt_pink{
                                 display: inline-block;
-                                width: 400px;
+                                width: 100%;
                                 height: 4rem;
                                 background-color: #fff;
                                 border-radius: 4rem;
                                 margin: 0;
                                 a{
-                                width: 400px;
+                            
                                 height: 4rem;
                                 display: block;
                                 text-align: center;
@@ -897,16 +1320,18 @@ body{
 
                 /* ◆◆◆◆◆◆◆◆◆◆ food開始 ◆◆◆◆◆◆◆◆◆◆ */
                 .food{
-                    width: 100%;
+                    width: 100vw;
                     height: 660px;
                     margin: 0 auto;
+                
                     .food_area{
                         flex-flow: column;
-                        width: 550px;
+                        width: 100vw;
                         margin: 2rem auto;
                         .food_img{
-                            width: 100%;
+                            width: 90%;
                             height: 220px;
+                            margin: 0 auto;
                             img{
                                 width: 110%;
                                 height: 140%;
@@ -914,20 +1339,30 @@ body{
                             }
                         }
                         .food_content{
-                            width: auto;
+                            width: 91%;
                             padding-left: 0;
-                            padding-top: 2rem;
+                            padding-top: 1rem;
+                            margin: 0 auto;
                             .food_bt_area{
                                 padding: 0;
                                 .bt_l_yellow{
-                                    width: 550px;
+                                    width: 100%;
                                 }
                             }
                         }
                     }
                 }
                 /* ◆◆◆◆◆◆◆◆◆◆ food終了 ◆◆◆◆◆◆◆◆◆◆ */
-
+                #bigimg_display{
+                    img{
+                        max-width: 90%;
+                        max-height: 50%;
+                        margin-top: 12rem;
+                    }
+                    .close{
+                        margin: 33% 0 0% 71%;
+                    }
+                }
             }
         }
         /* ◆◆◆◆◆◆◆◆◆◆ content_area終了 ◆◆◆◆◆◆◆◆◆◆ */
@@ -940,10 +1375,14 @@ body{
 
         /* ◆◆◆◆◆◆◆◆◆◆ footer開始 ◆◆◆◆◆◆◆◆◆◆ */
         footer{
-            width: 100%;
-            
+            width: 100vw;
+            min-width: auto;
             .footer_area{
                 width: auto;
+                
+                .footer_logo{
+                    margin-bottom: 8rem;
+                }
             }
         }
         /* ◆◆◆◆◆◆◆◆◆◆ footer終了 ◆◆◆◆◆◆◆◆◆◆ */
