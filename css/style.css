@@ -7,7 +7,8 @@
 
 body {
   width: 100vw;
-  min-width: 960px;
+  /*
+    min-width: 960px;*/
   /*------------header開始----------------*/
   /*------------header終了----------------*/
   /*------------content_area開始----------------*/
@@ -44,6 +45,8 @@ body header .warapper {
   position: relative;
   width: 100vw;
   margin: 0 auto;
+  /*ハンバーガー（PC非表示）*/
+  /*ハンバーガー（PC非表示）*/
 }
 
 body header .warapper nav {
@@ -107,6 +110,14 @@ body header .warapper nav ul li a:hover {
           filter: invert(1);
 }
 
+body header .warapper .openbtn {
+  display: none;
+}
+
+body header .warapper #hamburger {
+  display: none;
+}
+
 body header .warapper .warapper_obi {
   width: 100vw;
   height: 60px;
@@ -130,6 +141,86 @@ body header .warapper .warapper_img img {
   height: 100%;
 }
 
+body header .warapper .slide {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  margin: auto;
+  background: #fff;
+}
+
+body header .warapper .slide img {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: inherit;
+  opacity: 0;
+  -webkit-animation: slideAnime 24s ease infinite;
+          animation: slideAnime 24s ease infinite;
+}
+
+body header .warapper .slide img:nth-of-type(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+body header .warapper .slide img:nth-of-type(2) {
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+}
+
+body header .warapper .slide img:nth-of-type(3) {
+  -webkit-animation-delay: 12s;
+          animation-delay: 12s;
+}
+
+body header .warapper .slide img:nth-of-type(4) {
+  -webkit-animation-delay: 18s;
+          animation-delay: 18s;
+}
+
+@-webkit-keyframes slideAnime {
+  0% {
+    opacity: 0;
+  }
+  6% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 1;
+  }
+  28% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes slideAnime {
+  0% {
+    opacity: 0;
+  }
+  6% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 1;
+  }
+  28% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 body .content_area {
   width: 960px;
   display: -webkit-box;
@@ -147,6 +238,8 @@ body .content_area main {
       -ms-flex-order: 1;
           order: 1;
   /*------------table開始(テーブル写真割)----------------*/
+  /*★★★★★★★ポップアップ★★★★*/
+  /*★★★★★★★ポップアップ★★★★*/
   /*------------table開始(テーブル写真割)----------------*/
   /*------------movie開始----------------*/
   /*------------movie終了----------------*/
@@ -189,13 +282,64 @@ body .content_area main table .table_box3 {
   overflow: hidden;
 }
 
+body .content_area main table a:hover {
+  opacity: 0.7;
+}
+
 body .content_area main img {
   width: 100%;
   height: 100%;
 }
 
-body .content_area main .show_window {
+body .content_area main .slider_show {
   display: none;
+}
+
+body .content_area main .bigimg .close {
+  display: none;
+}
+
+body .content_area main #bigimg_display .close {
+  display: block;
+  color: #fff;
+  margin: 5vw 0 0 73vw;
+  text-align: center;
+}
+
+body .content_area main #bigimg_display .close p {
+  font-size: 38px;
+  text-shadow: 3px 2px 3px #000;
+}
+
+body .content_area main #bigimg_display .close :nth-child(2) {
+  font-size: 22px;
+}
+
+body .content_area main #bigimg_display {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100% !important;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 997;
+}
+
+body .content_area main #bigimg_display img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-width: 60%;
+  max-height: 70%;
+  border: 10px solid #fff;
+  -webkit-box-shadow: 6px 7px 4px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 6px 7px 4px 5px rgba(0, 0, 0, 0.5);
+  height: 90%;
 }
 
 body .content_area main .movie {
@@ -383,6 +527,8 @@ body .content_area main .skyphoto {
   width: 100%;
   height: 300px;
   margin: 6rem auto;
+  /*★★★★★★★ポップアップ★★★★*/
+  /*★★★★★★★ポップアップ★★★★*/
 }
 
 body .content_area main .skyphoto .skyphoto_area {
@@ -427,19 +573,72 @@ body .content_area main .skyphoto .skyphoto_area .skyphoto_content .skyphoto_bt_
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  /*a{
+                                display: flex;
+                                padding-left: 4rem;
+
+                                
+                                img{
+                                        width: 20px;
+                                        height: 20px;
+                                        margin: 0.6rem 2rem;
+                                }
+                            }*/
 }
 
 body .content_area main .skyphoto .skyphoto_area .skyphoto_content .skyphoto_bt_area a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-left: 4rem;
+  position: relative;
+  padding: .1em .3em .1em 0;
 }
 
-body .content_area main .skyphoto .skyphoto_area .skyphoto_content .skyphoto_bt_area a img {
-  width: 20px;
-  height: 20px;
-  margin: 0.6rem 2rem;
+body .content_area main .skyphoto .skyphoto_area .skyphoto_content .skyphoto_bt_area a::before, body .content_area main .skyphoto .skyphoto_area .skyphoto_content .skyphoto_bt_area a::after {
+  position: absolute;
+  content: "□";
+  width: 4px;
+  height: 4px;
+  color: #fff;
+}
+
+body .content_area main .skyphoto .skyphoto_area .skyphoto_content .skyphoto_bt_area a::before {
+  left: 258px;
+  top: -2px;
+}
+
+body .content_area main .skyphoto .skyphoto_area .skyphoto_content .skyphoto_bt_area a::after {
+  left: 262.5px;
+  top: 3.5px;
+}
+
+body .content_area main .skyphoto .skyphoto_area .skyphoto_content .skyphoto_bt_area a::after .block {
+  width: 15px;
+  height: 15px;
+  margin-top: 6px;
+  margin-left: 254px;
+  position: absolute;
+  border: 2px solid #fff;
+  border-radius: 2px;
+}
+
+body .content_area main .skyphoto .skyphoto_area .skyphoto_content .skyphoto_bt_area a::after .block::after {
+  width: 15px;
+  height: 15px;
+  margin-top: 8px;
+  margin-left: 254px;
+  position: absolute;
+  border: 2px solid #fff;
+  border-radius: 2px;
+}
+
+body .content_area main .skyphoto .skyphoto_bt_area .close {
+  display: none;
+}
+
+body .content_area main .skyphoto .skyphoto_bt_area img {
+  display: none;
+}
+
+body .content_area main .skyphoto .skyphoto_bt_area a img {
+  display: block;
 }
 
 body .content_area main .feel_good {
@@ -589,7 +788,23 @@ body .content_area aside {
   background-color: #C6C6C6;
 }
 
-body .content_area aside .aside_box {
+body .content_area aside .aside_slide {
+  /*メニューがついてくる設定*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  position: -webkit-sticky;
+  position: sticky;
+  /*こいつがキモ*/
+  top: 10px;
+  /*メニューがついてくる設定*/
+}
+
+body .content_area aside .aside_slide .aside_box {
   width: 110px;
   height: 175px;
   margin: 1rem auto;
@@ -597,26 +812,26 @@ body .content_area aside .aside_box {
   background-color: #fff;
 }
 
-body .content_area aside .aside_box .aside_img {
+body .content_area aside .aside_slide .aside_box .aside_img {
   height: 120px;
   overflow: hidden;
   border-bottom: 1px solid #000;
 }
 
-body .content_area aside .aside_box .aside_img img {
+body .content_area aside .aside_slide .aside_box .aside_img img {
   width: 110%;
   height: 100%;
 }
 
-body .content_area aside .aside_box .aside_title {
+body .content_area aside .aside_slide .aside_box .aside_title {
   margin: 5px;
 }
 
-body .content_area aside .aside_box .aside_title p {
+body .content_area aside .aside_slide .aside_box .aside_title p {
   font-size: 10px;
 }
 
-body .content_area aside .aside_box .aside_title.aside_title p:nth-child(2) {
+body .content_area aside .aside_slide .aside_box .aside_title.aside_title p:nth-child(2) {
   font-size: 6px;
   text-align: right;
   margin-top: 13px;
@@ -635,7 +850,6 @@ body footer {
 body footer .footer_area {
   width: 960px;
   margin: 0 auto;
-  padding-bottom: 1rem;
 }
 
 body footer .footer_area .footer_logo {
@@ -706,15 +920,22 @@ body .bt_l_yellow:hover {
           filter: opacity(0.5);
 }
 
-/*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+body #bigimg_display .skyphoto_bt_area .bt_l_yellow {
+  display: none;
+}
 
-　　　　★★★★★★★　SP版　600pxで切り替え　★★★★★★★
+/*=======================================================
 
-■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+        ★★★★★★★ SP版 600pxで切り替え ★★★★★★★
+
+=========================================================*/
 @media all and (max-width: 600px) {
+  * {
+    font-size: 18px;
+  }
   body {
-    width: 100%;
-    min-width: none;
+    width: 100vw;
+    min-width: auto;
     /* ◆◆◆◆◆◆◆◆◆◆ header開始 ◆◆◆◆◆◆◆◆◆◆ */
     /* ◆◆◆◆◆◆◆◆◆◆ header終了 ◆◆◆◆◆◆◆◆◆◆ */
     /* ◆◆◆◆◆◆◆◆◆◆ content_area開始 ◆◆◆◆◆◆◆◆◆◆ */
@@ -727,34 +948,140 @@ body .bt_l_yellow:hover {
     /* ◆◆◆◆◆◆◆◆◆◆ 共有エリア終了 ◆◆◆◆◆◆◆◆◆◆ */
   }
   body header {
-    height: 500px;
-    width: 100%;
+    height: 405px;
+    width: 100vw;
   }
   body header .logo_area {
-    width: 100%;
+    width: 100vw;
     text-align: center;
   }
   body header .warapper {
     width: 100%;
+    /*ハンバーガー（sp表示）*/
+    /*ハンバーガー（sp非表示）*/
+    /*ハンバーガー*/
+    /*アクティブクラスがついたら位置を0に*/
+    /*ナビゲーション*/
+    /*リストのレイアウト設定*/
+    /*×に変化*/
   }
   body header .warapper nav {
     display: none;
   }
   body header .warapper .warapper_obi {
     display: none;
+    min-width: auto;
   }
   body header .warapper .warapper_img {
-    height: 400px;
+    min-width: auto;
+    height: 305px;
     overflow: hidden;
   }
-  body .content_area {
+  body header .warapper .openbtn {
+    display: inline-block;
+  }
+  body header .warapper #hamburger {
+    display: inline-block;
+  }
+  body header .warapper #hamburger {
+    /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+    position: fixed;
+    z-index: 999;
+    /*ナビのスタート位置と形状*/
+    top: 0;
+    right: -120%;
     width: 100%;
+    height: 100%;
+    /*ナビの高さ*/
+    background: rgba(0, 0, 0, 0.45);
+    /*動き*/
+    -webkit-transition: all 0.6s;
+    transition: all 0.6s;
+  }
+  body header .warapper #hamburger.panelactive {
+    right: 0;
+  }
+  body header .warapper #hamburger ul {
+    /*ナビゲーション天地中央揃え*/
+    position: absolute;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  body header .warapper #hamburger li {
+    list-style: none;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  body header .warapper #hamburger li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+  }
+  body header .warapper .openbtn {
+    position: fixed;
+    z-index: 9999;
+    /*ボタンを最前面に*/
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+  }
+  body header .warapper .openbtn span {
+    display: inline-block;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #fff;
+    width: 45%;
+  }
+  body header .warapper .openbtn span:nth-of-type(1) {
+    top: 15px;
+  }
+  body header .warapper .openbtn span:nth-of-type(2) {
+    top: 23px;
+  }
+  body header .warapper .openbtn span:nth-of-type(3) {
+    top: 31px;
+  }
+  body header .warapper .openbtn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    -webkit-transform: translateY(6px) rotate(-45deg);
+            transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+  }
+  body header .warapper .openbtn.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+  body header .warapper .openbtn.active span:nth-of-type(3) {
+    top: 30px;
+    left: 18px;
+    -webkit-transform: translateY(-6px) rotate(45deg);
+            transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+  }
+  body .content_area {
+    width: 100vw;
     margin: 0;
   }
   body .content_area main {
-    width: 100%;
-    /* ◆◆◆◆◆◆◆◆◆◆ table非表示show_window開始 ◆◆◆◆◆◆◆◆◆◆ */
-    /* ◆◆◆◆◆◆◆◆◆◆ table非表示show_window終了 ◆◆◆◆◆◆◆◆◆◆ */
+    width: 100vw;
+    /* ◆◆◆◆◆◆◆◆◆◆ table非表示slider_show開始 ◆◆◆◆◆◆◆◆◆◆ */
+    /* ◆◆◆◆◆◆◆◆◆◆ table非表示slider_show終了 ◆◆◆◆◆◆◆◆◆◆ */
     /* ◆◆◆◆◆◆◆◆◆◆ movie開始 ◆◆◆◆◆◆◆◆◆◆ */
     /* ◆◆◆◆◆◆◆◆◆◆ movie終了 ◆◆◆◆◆◆◆◆◆◆ */
     /* ◆◆◆◆◆◆◆◆◆◆ news開始 ◆◆◆◆◆◆◆◆◆◆ */
@@ -775,39 +1102,142 @@ body .bt_l_yellow:hover {
   body .content_area main table {
     display: none;
   }
-  body .content_area main .show_window {
-    width: 600px;
-    height: 350px;
-    margin: 4rem 0;
-    position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  body .content_area main .slider_show {
+    display: block;
+    margin: 2rem auto;
+    height: 250px;
+  }
+  body .content_area main .slider_show .slider_show_area {
+    margin: 0 auto;
     overflow: hidden;
+    /*戻る、次へ矢印の位置*/
   }
-  body .content_area main .show_window .show_window_box1 {
+  body .content_area main .slider_show .slider_show_area img {
+    width: 75%;
+    margin: 0 auto;
+    z-index: 800;
+    content: "";
     position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
   }
-  body .content_area main .show_window .show_window_box2 {
-    position: absolute;
+  body .content_area main .slider_show .slider_show_area .slick_slide {
+    margin: 0 10px;
   }
-  body .content_area main .show_window .show_window_box3 {
+  body .content_area main .slider_show .slider_show_area .slick-prev,
+  body .content_area main .slider_show .slider_show_area .slick-next {
     position: absolute;
+    /*絶対配置にする*/
+    top: 50%;
+    cursor: pointer;
+    /*マウスカーソルを指マークに*/
+    outline: none;
+    /*クリックをしたら出てくる枠線を消す*/
+    border-top: 5px solid #fff;
+    /*矢印の色*/
+    border-right: 5px solid #fff;
+    /*矢印の色*/
+    height: 28px;
+    width: 28px;
+    margin: 0 3%;
+    z-index: 700;
   }
-  body .content_area main .show_window .show_window_box4 {
+  body .content_area main .slider_show .slider_show_area .slick-prev {
+    /*戻る矢印の位置と形状*/
+    left: 0.5%;
+    -webkit-transform: rotate(-135deg);
+            transform: rotate(-135deg);
+  }
+  body .content_area main .slider_show .slider_show_area .slick-next {
+    /*次へ矢印の位置と形状*/
+    right: 0.5%;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  body .content_area main .slider_show .slider_show_area .slider_box1 {
+    background-image: url("../img/IMG_0344.jpeg");
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+    position: relative;
+  }
+  body .content_area main .slider_show .slider_show_area .slider_box1::after {
+    content: "";
+    background: rgba(255, 255, 255, 0.3);
     position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  body .content_area main .slider_show .slider_show_area .slider_box2 {
+    background-image: url("../img/IMG_1044.jpeg");
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+    position: relative;
+  }
+  body .content_area main .slider_show .slider_show_area .slider_box2::after {
+    content: "";
+    background: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  body .content_area main .slider_show .slider_show_area .slider_box3 {
+    background-image: url("../img/IMG_5884.jpeg");
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+    position: relative;
+  }
+  body .content_area main .slider_show .slider_show_area .slider_box3::after {
+    content: "";
+    background: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  body .content_area main .slider_show .slider_show_area .slider_box4 {
+    background-image: url("../img/IMG_0489.jpeg");
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+    position: relative;
+  }
+  body .content_area main .slider_show .slider_show_area .slider_box4::after {
+    content: "";
+    background: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
   }
   body .content_area main .movie {
-    width: 600px;
-    margin: 4rem auto;
-    padding: 0 3rem;
+    width: 100vw;
+    margin: 3rem auto;
+    padding: 0;
   }
-  body .content_area main .movie iframe {
-    width: 500px;
-    height: 300px;
+  body .content_area main .movie .movie_box {
+    width: 90%;
+    height: 200px;
+    margin: 0 auto;
+    display: block;
+    overflow: hidden;
+  }
+  body .content_area main .movie .movie_box iframe {
+    width: 100%;
+    height: 100%;
   }
   body .content_area main .news {
-    width: 100%;
+    width: 100vw;
     height: 400px;
     padding: 0;
   }
@@ -832,7 +1262,7 @@ body .bt_l_yellow:hover {
     margin: 0 auto;
   }
   body .content_area main .news .news_area .news_border::before {
-    width: 500px;
+    width: 84vw;
     height: 2px;
     margin: none;
   }
@@ -840,7 +1270,7 @@ body .bt_l_yellow:hover {
     margin: 0 auto;
   }
   body .content_area main .goto {
-    width: 100%;
+    width: 100vw;
     height: 500px;
     margin: 0 auto;
   }
@@ -849,12 +1279,13 @@ body .bt_l_yellow:hover {
     -webkit-box-direction: normal;
         -ms-flex-flow: column;
             flex-flow: column;
-    width: 550px;
+    width: 100vw;
     margin: 2rem auto;
   }
   body .content_area main .goto .goto_area .goto_img {
-    width: 100%;
+    width: 90%;
     height: 220px;
+    margin: 0 auto;
   }
   body .content_area main .goto .goto_area .goto_img img {
     width: 200%;
@@ -862,22 +1293,27 @@ body .bt_l_yellow:hover {
     margin-left: -196px;
   }
   body .content_area main .goto .goto_area .goto_content {
-    width: auto;
+    width: 91%;
     padding-left: 0;
-    padding-top: 2rem;
+    padding-top: 1rem;
+    margin: 0 auto;
   }
   body .content_area main .goto .goto_area .goto_content .goto_bt_area {
     padding: 0 1rem;
+    margin-top: 1rem;
+  }
+  body .content_area main .goto .goto_area .bt_s_yellow {
+    width: 45%;
   }
   body .content_area main .goto2 {
     display: inline-block;
-    width: 100%;
+    width: 100vw;
     height: 270px;
     margin: 0 auto;
   }
   body .content_area main .goto2 .goto2_area {
-    width: 550px;
-    margin: 2rem auto;
+    width: 90%;
+    margin: 1rem auto;
   }
   body .content_area main .goto2 .goto2_area .goto2_content {
     display: -webkit-box;
@@ -885,20 +1321,26 @@ body .bt_l_yellow:hover {
     display: flex;
     width: auto;
     padding-left: 0;
-    padding-top: 2rem;
+    padding-top: 1rem;
+  }
+  body .content_area main .goto2 .goto2_area .goto2_content p {
+    margin: 0;
+    width: 54%;
   }
   body .content_area main .goto2 .goto2_area .goto2_content .goto2_bt_area {
-    padding: 0 1rem;
+    width: 39%;
+    margin: 0 auto;
   }
   body .content_area main .goto2 .goto2_area .goto2_content .goto2_bt_area .bt_s_yellow {
     margin: 0rem auto 1rem;
+    width: 36vw;
   }
   body .content_area main .topcs {
     width: 100%;
-    height: 1630px;
+    height: 1690px;
   }
   body .content_area main .topcs .topcs_area {
-    width: 400px;
+    width: 65vw;
     margin: 0 auto;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -918,14 +1360,13 @@ body .bt_l_yellow:hover {
   }
   body .content_area main .topcs .topcs_area .sp_bt_pink {
     display: inline-block;
-    width: 400px;
+    width: 100%;
     height: 4rem;
     background-color: #fff;
     border-radius: 4rem;
     margin: 30px auto 5rem;
   }
   body .content_area main .topcs .topcs_area .sp_bt_pink a {
-    width: 400px;
     height: 4rem;
     display: block;
     text-align: center;
@@ -945,45 +1386,62 @@ body .bt_l_yellow:hover {
     display: none;
   }
   body .content_area main .skyphoto {
-    width: 100%;
-    height: 500px;
-    margin: 0 auto;
+    width: 100vw;
+    height: 9%;
+    margin: 1rem auto 2rem;
   }
   body .content_area main .skyphoto .skyphoto_area {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-flow: column;
             flex-flow: column;
-    width: 550px;
+    width: 100vw;
     margin: 2rem auto;
   }
   body .content_area main .skyphoto .skyphoto_area .skyphoto_img {
-    width: 100%;
+    width: 90%;
     height: 220px;
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
+    margin: 0 auto;
   }
   body .content_area main .skyphoto .skyphoto_area .skyphoto_img img {
-    width: 100%;
+    width: 105%;
     height: 210%;
     margin-left: -7px;
     margin-top: -211px;
   }
   body .content_area main .skyphoto .skyphoto_area .skyphoto_content {
-    width: auto;
-    padding: 2rem 0 0 0;
+    width: 91%;
+    padding-left: 0;
+    padding-top: 1rem;
+    padding-right: 0%;
+    margin: 0 auto;
   }
   body .content_area main .skyphoto .skyphoto_area .skyphoto_content .skyphoto_bt_area {
     margin: 2rem auto 0;
-    width: 320px;
+    width: 100%;
+  }
+  body .content_area main .skyphoto .skyphoto_area .skyphoto_content .skyphoto_bt_area a {
+    width: 90%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* justify-items: center; */
+    padding-left: 16%;
+    font-size: 4vw;
+  }
+  body .content_area main .skyphoto .skyphoto_area .skyphoto_content .skyphoto_bt_area a img {
+    margin: 0.6rem 1rem;
   }
   body .content_area main .feel_good {
-    width: 100%;
-    height: 1010px;
+    width: 100vw;
+    height: 1030px;
   }
   body .content_area main .feel_good .feel_good_area {
-    width: 400px;
+    width: 65vw;
     margin: 0 auto;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1003,14 +1461,13 @@ body .bt_l_yellow:hover {
   }
   body .content_area main .feel_good .feel_good_area .feel_good_box .sp_bt_pink {
     display: inline-block;
-    width: 400px;
+    width: 100%;
     height: 4rem;
     background-color: #fff;
     border-radius: 4rem;
     margin: 0;
   }
   body .content_area main .feel_good .feel_good_area .feel_good_box .sp_bt_pink a {
-    width: 400px;
     height: 4rem;
     display: block;
     text-align: center;
@@ -1030,7 +1487,7 @@ body .bt_l_yellow:hover {
     display: none;
   }
   body .content_area main .food {
-    width: 100%;
+    width: 100vw;
     height: 660px;
     margin: 0 auto;
   }
@@ -1039,12 +1496,13 @@ body .bt_l_yellow:hover {
     -webkit-box-direction: normal;
         -ms-flex-flow: column;
             flex-flow: column;
-    width: 550px;
+    width: 100vw;
     margin: 2rem auto;
   }
   body .content_area main .food .food_area .food_img {
-    width: 100%;
+    width: 90%;
     height: 220px;
+    margin: 0 auto;
   }
   body .content_area main .food .food_area .food_img img {
     width: 110%;
@@ -1052,24 +1510,37 @@ body .bt_l_yellow:hover {
     margin-left: -16px;
   }
   body .content_area main .food .food_area .food_content {
-    width: auto;
+    width: 91%;
     padding-left: 0;
-    padding-top: 2rem;
+    padding-top: 1rem;
+    margin: 0 auto;
   }
   body .content_area main .food .food_area .food_content .food_bt_area {
     padding: 0;
   }
   body .content_area main .food .food_area .food_content .food_bt_area .bt_l_yellow {
-    width: 550px;
+    width: 100%;
+  }
+  body .content_area main #bigimg_display img {
+    max-width: 90%;
+    max-height: 50%;
+    margin-top: 12rem;
+  }
+  body .content_area main #bigimg_display .close {
+    margin: 33% 0 0% 71%;
   }
   body aside {
     display: none;
   }
   body footer {
-    width: 100%;
+    width: 100vw;
+    min-width: auto;
   }
   body footer .footer_area {
     width: auto;
+  }
+  body footer .footer_area .footer_logo {
+    margin-bottom: 8rem;
   }
   body .bt_s_yellow {
     width: 230px;
