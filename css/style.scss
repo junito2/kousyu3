@@ -958,12 +958,23 @@ body{
 
                         
                         .slider_box1{
-                            background-image: url("../img/IMG_1044.jpeg");
+                            background-image: url("../img/IMG_0344.jpeg");
                             width: 100%;
                             height: 250px; 
                             background-size: cover;
                             position: relative;
-                            
+                            img{
+                                width: 75%;
+                                margin: 0 auto;
+                                
+                                content: "";
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                bottom: 0;
+                                left: 0;
+                                z-index: 550;
+                                }
                         }
                         .slider_box1::after{
                             content: "";
@@ -983,7 +994,18 @@ body{
                             background-size: cover;
                             
                             position: relative;
-                            
+                            img{
+                                width: 75%;
+                                margin: 0 auto;
+                                
+                                content: "";
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                bottom: 0;
+                                left: 0;
+                                z-index: 550;
+                                }
                         }
                         .slider_box2::after{
                             content: "";
@@ -1001,7 +1023,18 @@ body{
                             background-size: cover;
                             
                             position: relative;
-                           
+                            img{
+                                width: 75%;
+                                margin: 0 auto;
+                                
+                                content: "";
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                bottom: 0;
+                                left: 0;
+                                z-index: 550;
+                                }
                         }
                         .slider_box3::after{
                             content: "";
@@ -1018,7 +1051,18 @@ body{
                             height: 250px;
                             background-size: cover;
                             position: relative;
-                           
+                            img{
+                                width: 75%;
+                                margin: 0 auto;
+                                
+                                content: "";
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                bottom: 0;
+                                left: 0;
+                                z-index: 550;
+                                }
                         }
                         .slider_box4::after{
                             content: "";
@@ -1029,18 +1073,7 @@ body{
                             bottom: 0;
                             left: 0;
                         }
-                        img{
-                            width: 75%;
-                            margin: 0 auto;
-                            
-                            content: "";
-                            position: absolute;
-                            top: 0;
-                            right: 0;
-                            bottom: 0;
-                            left: 0;
-                            z-index: 550;
-                            }
+                       
                             /*img:nth-child(2){
                                 width: 100%;
                                 position: absolute;
