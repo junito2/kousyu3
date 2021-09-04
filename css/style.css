@@ -1146,11 +1146,22 @@ body #bigimg_display .skyphoto_bt_area .bt_l_yellow {
             transform: rotate(45deg);
   }
   body .content_area main .slider_show .slider_show_area .slider_box1 {
-    background-image: url("../img/IMG_1044.jpeg");
+    background-image: url("../img/IMG_0344.jpeg");
     width: 100%;
     height: 250px;
     background-size: cover;
     position: relative;
+  }
+  body .content_area main .slider_show .slider_show_area .slider_box1 img {
+    width: 75%;
+    margin: 0 auto;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 550;
   }
   body .content_area main .slider_show .slider_show_area .slider_box1::after {
     content: "";
@@ -1168,6 +1179,17 @@ body #bigimg_display .skyphoto_bt_area .bt_l_yellow {
     background-size: cover;
     position: relative;
   }
+  body .content_area main .slider_show .slider_show_area .slider_box2 img {
+    width: 75%;
+    margin: 0 auto;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 550;
+  }
   body .content_area main .slider_show .slider_show_area .slider_box2::after {
     content: "";
     background: rgba(255, 255, 255, 0.3);
@@ -1183,6 +1205,17 @@ body #bigimg_display .skyphoto_bt_area .bt_l_yellow {
     height: 250px;
     background-size: cover;
     position: relative;
+  }
+  body .content_area main .slider_show .slider_show_area .slider_box3 img {
+    width: 75%;
+    margin: 0 auto;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 550;
   }
   body .content_area main .slider_show .slider_show_area .slider_box3::after {
     content: "";
@@ -1200,16 +1233,7 @@ body #bigimg_display .skyphoto_bt_area .bt_l_yellow {
     background-size: cover;
     position: relative;
   }
-  body .content_area main .slider_show .slider_show_area .slider_box4::after {
-    content: "";
-    background: rgba(255, 255, 255, 0.3);
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  }
-  body .content_area main .slider_show .slider_show_area img {
+  body .content_area main .slider_show .slider_show_area .slider_box4 img {
     width: 75%;
     margin: 0 auto;
     content: "";
@@ -1219,6 +1243,15 @@ body #bigimg_display .skyphoto_bt_area .bt_l_yellow {
     bottom: 0;
     left: 0;
     z-index: 550;
+  }
+  body .content_area main .slider_show .slider_show_area .slider_box4::after {
+    content: "";
+    background: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
   }
   body .content_area main .movie {
     width: 100vw;
