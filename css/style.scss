@@ -925,30 +925,7 @@ body{
                         margin: 0 auto;
                         overflow: hidden;
                       
-                            img{
-                            width: 75%;
-                            margin: 0 auto;
                             
-                            content: "";
-                            position: absolute;
-                            top: 0;
-                            right: 0;
-                            bottom: 0;
-                            left: 0;
-                            z-index: 550;
-                            }
-                            img:nth-child(2){
-                                width: 100%;
-                                position: absolute;
-                                content: "";
-                                top: 0;
-                            right: 0;
-                            bottom: 0;
-                            left: 0;
-                            z-index: 500;
-                            opacity: 0.5;
-                            }
-                        
                         .slick_slide{
                             margin: 0 10px;
                         }
@@ -988,7 +965,7 @@ body{
                             position: relative;
                             z-index: 500;
                         }
-                        .slider_box1::after{
+                        /*.slider_box1::after{
                             content: "";
                             background: rgba(255,255,255,.3);
                             position: absolute;
@@ -996,7 +973,7 @@ body{
                             right: 0;
                             bottom: 0;
                             left: 0;
-                        }
+                        }*/
                         .slider_box2{
                             /*background-image: url("../img/IMG_1044.jpeg");*/
                             width: 100%;
@@ -1006,7 +983,7 @@ body{
                             position: relative;
                             z-index: 500;
                         }
-                        .slider_box2::after{
+                        /*.slider_box2::after{
                             content: "";
                             background: rgba(255,255,255,.3);
                             position: absolute;
@@ -1014,7 +991,7 @@ body{
                             right: 0;
                             bottom: 0;
                             left: 0;
-                        }
+                        }*/
                         .slider_box3{
                             /*background-image: url("../img/IMG_5884.jpeg");*/
                             width: 100%;
@@ -1024,7 +1001,7 @@ body{
                             position: relative;
                             z-index: 500;
                         }
-                        .slider_box3::after{
+                        /*.slider_box3::after{
                             content: "";
                             background: rgba(255,255,255,.3);
                             position: absolute;
@@ -1032,7 +1009,7 @@ body{
                             right: 0;
                             bottom: 0;
                             left: 0;
-                        }
+                        }*/
                         .slider_box4{
                             /*background-image: url("../img/IMG_0489.jpeg");*/
                             width: 100%;
@@ -1041,7 +1018,7 @@ body{
                             position: relative;
                             z-index: 500;
                         }
-                        .slider_box4::after{
+                        /*.slider_box4::after{
                             content: "";
                             background: rgba(255,255,255,.3);
                             position: absolute;
@@ -1049,7 +1026,31 @@ body{
                             right: 0;
                             bottom: 0;
                             left: 0;
-                        }
+                        }*/
+                        img{
+                            width: 75%;
+                            margin: 0 auto;
+                            
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            left: 0;
+                            z-index: 550;
+                            }
+                            img:nth-child(2){
+                                width: 100%;
+                                position: absolute;
+                                content: "";
+                                top: 0;
+                            right: 0;
+                            bottom: 0;
+                            left: 0;
+                            z-index: 500;
+                            opacity: 0.5;
+                            }
+                        
                     }
                 }
 
