@@ -922,24 +922,18 @@ body{
                     margin: 2rem auto;
                     height: 250px;
                     .slider_show_area{
-                        
-                       
                         margin: 0 auto;
                         overflow: hidden;
                         img{
                             width: 75%;
-                            
                             margin: 0 auto;
-                            z-index: 800;
-                                content: "";
-                             
-                                position: absolute;
-                                top: 0;
-                                right: 0;
-                                bottom: 0;
-                                left: 0;
-                             
-                            
+                            z-index: 9999;
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            left: 0;
                         }
                         .slick_slide{
                             margin: 0 10px;
@@ -1085,12 +1079,13 @@ body{
 
                         }
                         .news_border{
+                            width: 80%;
                             margin: 0 auto;
                         }
                         .news_border::before{
-                            width: 84vw;
+                            width: 100%;
                             height: 2px;
-                            margin: none;
+                            margin: 0;
                         }
                         nav{
                             margin: 0 auto;
@@ -1184,9 +1179,7 @@ body{
                             .topcs_imgbox{
                                 width: auto;
                                 height: 310px;
-                                img{
-                                    height: 140%;
-                                }
+                                
                             }
                         }
                         .sp_bt_pink{
@@ -1257,7 +1250,7 @@ body{
                                     margin: 0 auto;
                                     display: flex;
                                     /* justify-items: center; */
-                                    padding-left: 16%;
+                                    padding-left:14%;
                                     font-size: 4vw;
                                     img{
                                         margin: 0.6rem 1rem;
@@ -1283,9 +1276,6 @@ body{
                             .feel_good_img{
                                 width: auto;
                                 height: 310px;
-                                img{
-                                    height: 140%;
-                                }
                             }
                             .sp_bt_pink{
                                 display: inline-block;
@@ -1382,6 +1372,9 @@ body{
                 
                 .footer_logo{
                     margin-bottom: 8rem;
+                }
+                p{
+                    font-size: 21px;
                 }
             }
         }
