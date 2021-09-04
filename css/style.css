@@ -1433,7 +1433,7 @@ body #bigimg_display .skyphoto_bt_area .bt_l_yellow {
     display: flex;
     /* justify-items: center; */
     padding-left: 14%;
-    font-size: 4vw;
+    font-size: 15px;
   }
   body .content_area main .skyphoto .skyphoto_area .skyphoto_content .skyphoto_bt_area a img {
     margin: 0.6rem 1rem;
