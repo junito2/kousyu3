@@ -1162,6 +1162,7 @@ body #bigimg_display .skyphoto_bt_area .bt_l_yellow {
     bottom: 0;
     left: 0;
     z-index: 550;
+    display: block;
   }
   body .content_area main .slider_show .slider_show_area .slider_box1::after {
     content: "";
