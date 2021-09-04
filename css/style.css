@@ -1146,7 +1146,7 @@ body #bigimg_display .skyphoto_bt_area .bt_l_yellow {
             transform: rotate(45deg);
   }
   body .content_area main .slider_show .slider_show_area .slider_box1 {
-    background-image: url("../img/IMG_0344.jpeg");
+    /* background-image: url("../img/IMG_0344.jpeg");*/
     width: 100%;
     height: 250px;
     background-size: cover;
