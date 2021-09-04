@@ -1104,13 +1104,24 @@ body #bigimg_display .skyphoto_bt_area .bt_l_yellow {
   body .content_area main .slider_show .slider_show_area img {
     width: 75%;
     margin: 0 auto;
-    z-index: 9999;
     content: "";
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+    z-index: 550;
+  }
+  body .content_area main .slider_show .slider_show_area img:nth-child(2) {
+    width: 100%;
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 500;
+    opacity: 0.5;
   }
   body .content_area main .slider_show .slider_show_area .slick_slide {
     margin: 0 10px;
@@ -1146,11 +1157,12 @@ body #bigimg_display .skyphoto_bt_area .bt_l_yellow {
             transform: rotate(45deg);
   }
   body .content_area main .slider_show .slider_show_area .slider_box1 {
-    /* background-image: url("../img/IMG_0344.jpeg");*/
+    /*background-image: url("../img/IMG_0344.jpeg");*/
     width: 100%;
     height: 250px;
     background-size: cover;
     position: relative;
+    z-index: 500;
   }
   body .content_area main .slider_show .slider_show_area .slider_box1::after {
     content: "";
@@ -1162,11 +1174,12 @@ body #bigimg_display .skyphoto_bt_area .bt_l_yellow {
     left: 0;
   }
   body .content_area main .slider_show .slider_show_area .slider_box2 {
-    background-image: url("../img/IMG_1044.jpeg");
+    /*background-image: url("../img/IMG_1044.jpeg");*/
     width: 100%;
     height: 250px;
     background-size: cover;
     position: relative;
+    z-index: 500;
   }
   body .content_area main .slider_show .slider_show_area .slider_box2::after {
     content: "";
@@ -1178,11 +1191,12 @@ body #bigimg_display .skyphoto_bt_area .bt_l_yellow {
     left: 0;
   }
   body .content_area main .slider_show .slider_show_area .slider_box3 {
-    background-image: url("../img/IMG_5884.jpeg");
+    /*background-image: url("../img/IMG_5884.jpeg");*/
     width: 100%;
     height: 250px;
     background-size: cover;
     position: relative;
+    z-index: 500;
   }
   body .content_area main .slider_show .slider_show_area .slider_box3::after {
     content: "";
@@ -1194,11 +1208,12 @@ body #bigimg_display .skyphoto_bt_area .bt_l_yellow {
     left: 0;
   }
   body .content_area main .slider_show .slider_show_area .slider_box4 {
-    background-image: url("../img/IMG_0489.jpeg");
+    /*background-image: url("../img/IMG_0489.jpeg");*/
     width: 100%;
     height: 250px;
     background-size: cover;
     position: relative;
+    z-index: 500;
   }
   body .content_area main .slider_show .slider_show_area .slider_box4::after {
     content: "";
